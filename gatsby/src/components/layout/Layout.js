@@ -49,7 +49,10 @@ export default function Layout({ children }) {
 	useEffect(() => {
 		baseUri.current = document.baseURI;
 
-		if (baseUri.current === 'http://localhost:8000/') {
+		if (
+			baseUri.current === 'https://dreamy-keller-d31d1e.netlify.app/' ||
+			baseUri.current === 'http://localhost:8000/'
+		) {
 			setFixedPosition(false);
 		} else {
 			setFixedPosition(true);
@@ -81,7 +84,7 @@ export default function Layout({ children }) {
 	`);
 
 	return (
-		<LayoutStyles>
+		<LayoutStyles fixedPosition={fixedPosition}>
 			<GlobalStyles />
 			<TopNavbar hasScrolled={hasScrolled} fixedPostion={fixedPosition} />
 			<Menubutton
@@ -93,6 +96,7 @@ export default function Layout({ children }) {
 				<SideNavbar
 					isSideNavbarOpen={isSideNavbarOpen}
 					toggleSideNavbar={handleToggleSideNavbar}
+					hasScrolled={hasScrolled}
 				/>
 			</div>
 			<Footer footerInfo={data.footerInfo} />
@@ -102,7 +106,7 @@ export default function Layout({ children }) {
 
 const LayoutStyles = styled.div`
 	.side-navbar {
-		display: none;
+		display: ${({ fixedPosition }) => (fixedPosition ? 'none' : 'block')};
 	}
 
 	@media ${breakpoint.sm} {

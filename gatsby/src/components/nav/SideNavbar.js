@@ -15,6 +15,7 @@ export default function SideNavbar({
 			<SideNavbarStyles
 				hasScrolled={hasScrolled}
 				isSideNavbarOpen={isSideNavbarOpen}
+				toggleSideNavbar={isSideNavbarOpen}
 			>
 				<NavLogo />
 				<div className='separator-line' />

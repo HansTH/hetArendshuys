@@ -3,13 +3,11 @@ import styled from 'styled-components';
 import NavLinks from './NavLinks';
 import smallLogo from '../../assets/images/arendshuys-logo-small.jpg';
 import { Link } from 'gatsby';
-import SideNavbar from './SideNavbar';
 import { breakpoint } from '../../styles/breakpoints';
 
 export default function TopNavbar({ hasScrolled, fixedPostion }) {
 	return (
 		<TopNavbarStyles hasScrolled={hasScrolled} fixedPostion={fixedPostion}>
-			{!fixedPostion && <SideNavbar hasScrolled={hasScrolled} />}
 			<div className='top-navbar'>
 				<div className='container'>
 					<div className='navbar'>
