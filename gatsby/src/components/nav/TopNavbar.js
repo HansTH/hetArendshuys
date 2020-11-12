@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import NavLinks from './NavLinks';
 import smallLogo from '../../assets/images/arendshuys-logo-small.jpg';
-import { Link, Image } from 'gatsby';
+import { Link } from 'gatsby';
 import SideNavbar from './SideNavbar';
 import { breakpoint } from '../../styles/breakpoints';
 
