@@ -76,8 +76,8 @@ const BrandStyles = styled.div`
 		}
 
 		.gatsby-image-wrapper {
-			width: 200px !important;
-			height: 200px !important;
+			width: 190px !important;
+			height: 190px !important;
 		}
 	}
 

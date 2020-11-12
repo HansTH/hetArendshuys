@@ -31,5 +31,20 @@ const StoreInfoStyles = styled.div`
 		p {
 			margin-top: 1rem;
 		}
+
+		.gatsby-image-wrapper {
+			width: 200px !important;
+			height: 200px !important;
+		}
+	}
+
+	@media ${breakpoint.xs} {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 1rem;
+		.gatsby-image-wrapper {
+			width: 130px !important;
+			height: 130px !important;
+		}
 	}
 `;
