@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import GlobalStyles from '../../styles/globalStyles';
+import GlobalStyles from '../../styles/GlobalStyles';
 import Footer from './Footer';
 import 'normalize.css';
 import Menubutton from '../nav/Menubutton';
