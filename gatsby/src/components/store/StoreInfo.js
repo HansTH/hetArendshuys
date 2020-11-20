@@ -21,10 +21,14 @@ export default function StoreInfo({ data }) {
 const StoreInfoStyles = styled.div`
 	.images-grid {
 		display: flex;
-		gap: 1rem;
+		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
 		margin: 2rem 0;
+	}
+
+	.gatsby-image-wrapper {
+		margin: 0.5rem;
 	}
 
 	@media ${breakpoint.sm} {
@@ -39,9 +43,8 @@ const StoreInfoStyles = styled.div`
 	}
 
 	@media ${breakpoint.xs} {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		gap: 1rem;
+		/* grid-template-columns: repeat(1, 1fr);
+		gap: 1rem; */
 		.gatsby-image-wrapper {
 			width: 130px !important;
 			height: 130px !important;
