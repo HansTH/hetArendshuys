@@ -75,7 +75,7 @@ const BrandLogoStyles = styled.div`
 
 		h2 {
 			padding: 0;
-			color: var(--blue);
+			color: var(--yellow);
 		}
 	}
 `;

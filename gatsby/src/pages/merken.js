@@ -44,7 +44,7 @@ export const data = graphql`
 export default function merken({ data }) {
 	return (
 		<MerkenStyles>
-			<SectionTitle title='Onze Merken' bgColor={`var(--white)`} />
+			<SectionTitle title='Onze Merken' bgColor={`var(--light-yellow)`} />
 			<BrandsList data={data} />
 		</MerkenStyles>
 	);

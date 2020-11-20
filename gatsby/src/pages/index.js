@@ -59,13 +59,13 @@ export default function Home({ data }) {
 	return (
 		<>
 			<Header />
-			<SectionTitle title='Onze Winkel' bgColor='#FCF7EF'>
+			<SectionTitle title='het Arendshuys' bgColor='var(--light-yellow)'>
 				<StoreInfo data={data} />
 			</SectionTitle>
-			<SectionTitle title='Onze Merken' bgColor='#FFE7B9'>
+			<SectionTitle title='Onze Merken' bgColor='var(--blue)'>
 				<BrandLogo storeBrands={data.storeBrands} />
 			</SectionTitle>
-			<SectionTitle title='Laatste Nieuws' bgColor='#FCF7EF'>
+			<SectionTitle title='Laatste Nieuws' bgColor='var(--light-yellow)'>
 				<StoreNews storeNews={data.storeNews} />
 			</SectionTitle>
 		</>

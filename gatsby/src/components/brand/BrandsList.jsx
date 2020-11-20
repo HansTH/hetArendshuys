@@ -32,14 +32,14 @@ export default function BrandsList({ data }) {
 
 const BrandStyles = styled.div`
 	.store-container {
-		background-color: var(--white);
+		background-color: var(--light-yellow);
 	}
 
 	.store-image-right {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
-		padding: 3rem 0;
+		padding-bottom: 3rem;
 	}
 
 	.store-images {

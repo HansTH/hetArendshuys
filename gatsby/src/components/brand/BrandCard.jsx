@@ -32,7 +32,7 @@ export default function brandCard({ brand, index }) {
 const BrandCardStyles = styled.div`
 	.brand-container {
 		background-color: ${({ index }) =>
-			index % 2 === 0 ? 'var(--light-yellow)' : 'var(--white)'};
+			index % 2 === 0 ? 'var(--white)' : 'var(--light-yellow)'};
 	}
 	.brand-images {
 		display: grid;
@@ -45,6 +45,11 @@ const BrandCardStyles = styled.div`
 	.brand-info {
 		padding-left: 1rem;
 		grid-area: text;
+
+		h3 {
+			font-size: 2rem;
+			margin-bottom: 0.5rem;
+		}
 	}
 
 	.brand-image-left,

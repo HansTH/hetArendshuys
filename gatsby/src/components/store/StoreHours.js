@@ -28,11 +28,13 @@ export default function StoreHours({ storeHours }) {
 const StoreHoursStyles = styled.table`
 	color: var(--light-yellow);
 	padding: 0.5rem;
+	font-size: 1.1rem;
 
 	th {
 		font-weight: bold;
 		padding-bottom: 0.5rem;
 		text-align: left;
+		color: var(--yellow);
 	}
 	td {
 		padding: 0.2rem 0;

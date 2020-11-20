@@ -42,12 +42,13 @@ export default function StoreContact({ contactInfo }) {
 const ContactInfoStyles = styled.table`
 	color: var(--light-yellow);
 	padding: 0.5rem;
-	/* flex: 1; */
+	font-size: 1.1rem;
 
 	th {
 		font-weight: bold;
 		padding-bottom: 0.5rem;
 		text-align: left;
+		color: var(--yellow);
 	}
 	td {
 		padding: 0.2rem 0;

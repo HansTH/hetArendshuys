@@ -31,7 +31,7 @@ export const query = graphql`
 export default function nieuws({ data }) {
 	return (
 		<NieuwsStyles>
-			<SectionTitle title='Nieuws' bgColor='#FCF7EF'>
+			<SectionTitle title='Nieuws' bgColor='var(--light-yellow);'>
 				<StoreNews storeNews={data.storeNews} />
 			</SectionTitle>
 		</NieuwsStyles>
@@ -39,7 +39,7 @@ export default function nieuws({ data }) {
 }
 
 const NieuwsStyles = styled.div`
-	margin-top: '100px';
+	margin-top: 100px;
 
 	@media ${breakpoint.sm} {
 		margin-top: 0;
