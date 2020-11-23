@@ -5,12 +5,12 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Schemas
-import storeHours from './storeHours';
 import storeInfo from './storeInfo';
 import storeContact from './storeContact';
 import storeNews from './storeNews';
 import storeBrands from './storeBrands';
 import openHours from './openHours';
+import socialMediaLink from './socialMediaLink';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,11 +20,11 @@ export default createSchema({
 	// to the ones provided by any plugins that are installed
 	types: schemaTypes.concat([
 		/* Your types here! */
-		storeHours,
 		storeContact,
 		storeInfo,
 		storeNews,
 		storeBrands,
 		openHours,
+		socialMediaLink,
 	]),
 });

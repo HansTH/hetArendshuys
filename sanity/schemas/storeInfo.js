@@ -4,6 +4,19 @@ export default {
 	type: 'document',
 	fields: [
 		{
+			title: 'Winkel Naam',
+			name: 'storeName',
+			description: 'De Naam van uw winkel.',
+			type: 'string',
+		},
+		{
+			title: 'Winkel Slogan',
+			name: 'storeSlogan',
+			description:
+				'Een pakkende slogan voor uw winkel (bijv. Stijlvol Wonen, ...).',
+			type: 'string',
+		},
+		{
 			title: 'Winkel Informatie',
 			name: 'storeInfo',
 			description: 'Vertel iets over de winkel',
@@ -28,6 +41,12 @@ export default {
 			title: 'Winkel Adresgegevens',
 			name: 'contactInfo',
 			type: 'storeContactInfo',
+		},
+		{
+			title: 'Social Media Links',
+			name: 'socialMediaLinks',
+			type: 'array',
+			of: [{ type: 'socialMediaLink' }],
 		},
 	],
 };

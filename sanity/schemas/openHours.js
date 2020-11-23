@@ -2,6 +2,7 @@ export default {
 	title: 'Openingstijden',
 	name: 'openHours',
 	type: 'object',
+	fieldset: [{ title: 'Maandag', value: 'monday' }],
 	fields: [
 		{
 			title: 'Dag',
@@ -12,7 +13,7 @@ export default {
 		{
 			title: 'Openingstijd',
 			name: 'openingHour',
-			description: 'Hoelaat gaat de winkel open? (bijv. 09:00)',
+			description: 'Hoe laat gaat de winkel open? (bijv. 09:00)',
 			type: 'string',
 		},
 		{
