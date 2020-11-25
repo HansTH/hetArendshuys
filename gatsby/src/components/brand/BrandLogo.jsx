@@ -32,16 +32,18 @@ var settings = {
 };
 
 export default function BrandLogo({ storeBrands }) {
-	const brand = storeBrands.nodes.map((brand) => brand.brandName.split(' '));
-
 	return (
 		<BrandLogoStyles>
 			<div className='container'>
 				<Slider {...settings}>
-					{brand.map((name, index) => (
+					{storeBrands.nodes.map((brand, index) => (
 						<div key={index} className='brand-card'>
-							<Link to='/merken'>
-								{name.map((item, index) => (
+							<Link to={`/merken#${brand.slug.current}`}>
+								{/* 
+									split the brand name into separate arrays 
+									and then map over the arrays.
+								*/}
+								{brand.brandName.split(' ').map((item, index) => (
 									<h2 key={index}>{item}</h2>
 								))}
 							</Link>
@@ -54,6 +56,7 @@ export default function BrandLogo({ storeBrands }) {
 }
 
 const BrandLogoStyles = styled.div`
+	padding-bottom: 2rem;
 	.brand-card {
 		display: flex !important;
 		justify-content: center;
@@ -77,5 +80,9 @@ const BrandLogoStyles = styled.div`
 			padding: 0;
 			color: var(--yellow);
 		}
+	}
+
+	.slick-dots li button:before {
+		color: var(--light-yellow) !important;
 	}
 `;

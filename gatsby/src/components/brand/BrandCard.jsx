@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import { breakpoint } from '../../styles/breakpoints';
 
 export default function brandCard({ brand, index }) {
+	console.log(brand.slug.current);
 	return (
 		<BrandCardStyles index={index}>
-			<div className='brand-container'>
+			<div className='brand-container' id={brand.slug.current}>
 				<div className='container'>
 					<div
 						className={
-							index % 2 === 1 ? ' brand-image-right' : 'brand-image-left'
+							index % 2 === 0 ? ' brand-image-right' : 'brand-image-left'
 						}
 					>
 						<div className='brand-info'>
@@ -33,6 +34,7 @@ const BrandCardStyles = styled.div`
 	.brand-container {
 		background-color: ${({ index }) =>
 			index % 2 === 0 ? 'var(--white)' : 'var(--light-yellow)'};
+		padding: 100px 0;
 	}
 	.brand-images {
 		display: grid;
@@ -57,7 +59,6 @@ const BrandCardStyles = styled.div`
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
-		padding: 3rem 0;
 	}
 
 	.brand-image-left {

@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 import GlobalStyles from '../../styles/GlobalStyles';
-import Footer from './Footer';
 import 'normalize.css';
+import Footer from './Footer';
 import Menubutton from '../nav/Menubutton';
 import TopNavbar from '../nav/TopNavbar';
 import SideNavbar from '../nav/SideNavbar';
-import styled from 'styled-components';
 import { breakpoint } from '../../styles/breakpoints';
-import { useStaticQuery, graphql } from 'gatsby';
 
 export default function Layout({ children }) {
-	const SCROLL_HEIGHT = 300;
+	const SCROLL_HEIGHT = 200;
 
 	const SCROLL_TOP = useRef();
 	const baseUri = useRef();
@@ -61,7 +61,7 @@ export default function Layout({ children }) {
 
 	const data = useStaticQuery(graphql`
 		{
-			footerInfo: allSanityStore {
+			storeData: allSanityStore {
 				nodes {
 					storeHours {
 						openingHour
@@ -78,6 +78,10 @@ export default function Layout({ children }) {
 						city
 						address
 					}
+					socialMediaData: socialMediaLinks {
+						socialMediaUrl
+						socialMediaName
+					}
 				}
 			}
 		}
@@ -86,7 +90,11 @@ export default function Layout({ children }) {
 	return (
 		<LayoutStyles fixedPosition={fixedPosition}>
 			<GlobalStyles />
-			<TopNavbar hasScrolled={hasScrolled} fixedPostion={fixedPosition} />
+			<TopNavbar
+				hasScrolled={hasScrolled}
+				fixedPostion={fixedPosition}
+				socialLinks={data.storeData.nodes[0].socialMediaData}
+			/>
 			<Menubutton
 				isSideNavbarOpen={isSideNavbarOpen}
 				toggleSideNavbar={handleToggleSideNavbar}
@@ -97,9 +105,10 @@ export default function Layout({ children }) {
 					isSideNavbarOpen={isSideNavbarOpen}
 					toggleSideNavbar={handleToggleSideNavbar}
 					hasScrolled={hasScrolled}
+					socialLinks={data.storeData.nodes[0].socialMediaData}
 				/>
 			</div>
-			<Footer footerInfo={data.footerInfo} />
+			<Footer footerInfo={data.storeData} />
 		</LayoutStyles>
 	);
 }

@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import { breakpoint } from '../../styles/breakpoints';
 
 export default function StoreInfo({ data }) {
-	const { storeInfo, storeImages } = data.storeInfo.nodes[0];
+	const { storeInfo, smallStoreImg } = data.storeInfo.nodes[0];
 
 	return (
 		<StoreInfoStyles>
 			<p>{storeInfo}</p>
 			<div className='images-grid'>
-				{storeImages.map((image) => (
+				{smallStoreImg.map((image) => (
 					<Image key={image.asset.id} fixed={image.asset.fixed} alt='image' />
 				))}
 			</div>
@@ -43,8 +43,6 @@ const StoreInfoStyles = styled.div`
 	}
 
 	@media ${breakpoint.xs} {
-		/* grid-template-columns: repeat(1, 1fr);
-		gap: 1rem; */
 		.gatsby-image-wrapper {
 			width: 130px !important;
 			height: 130px !important;

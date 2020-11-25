@@ -32,7 +32,7 @@ export default function nieuws({ data }) {
 	return (
 		<NieuwsStyles>
 			<SectionTitle title='Nieuws' bgColor='var(--light-yellow);'>
-				<StoreNews storeNews={data.storeNews} />
+				<StoreNews storeNews={data.storeNews} disableLink={true} />
 			</SectionTitle>
 		</NieuwsStyles>
 	);

@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import NavLinks from './NavLinks';
 import smallLogo from '../../assets/images/arendshuys-logo-small.jpg';
-import { Link } from 'gatsby';
 import { breakpoint } from '../../styles/breakpoints';
+import SocialLinks from './SocialLinks';
 
-export default function TopNavbar({ hasScrolled, fixedPostion }) {
+export default function TopNavbar({ hasScrolled, fixedPostion, socialLinks }) {
 	return (
 		<TopNavbarStyles hasScrolled={hasScrolled} fixedPostion={fixedPostion}>
 			<div className='top-navbar'>
@@ -18,6 +19,7 @@ export default function TopNavbar({ hasScrolled, fixedPostion }) {
 						</div>
 						<div className='top-nav-links'>
 							<NavLinks flexDirection='row' />
+							<SocialLinks flexDirection='row' links={socialLinks} />
 						</div>
 					</div>
 				</div>
@@ -48,6 +50,9 @@ const TopNavbarStyles = styled.nav`
 		}
 
 		.top-nav-links {
+			display: flex;
+			align-items: center;
+
 			a {
 				padding: 0 0.5rem;
 
@@ -57,7 +62,6 @@ const TopNavbarStyles = styled.nav`
 			}
 		}
 	}
-
 	@media ${breakpoint.sm} {
 		display: none;
 	}

@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 import { breakpoint } from '../../styles/breakpoints';
 
-export default function StoreNews({ storeNews }) {
+export default function StoreNews({ storeNews, disableLink }) {
 	const news = storeNews.nodes;
 
 	return (
-		<StoreNewsStyles>
+		<StoreNewsStyles disableLink={disableLink}>
 			<div className='container'>
 				{news.map((item) => (
-					<div key={item.id} className='news'>
+					<div key={item.id} className='news' id={item.slug.current}>
 						<div className='image'>
 							<Image fixed={item.newsImage.asset.fixed} />
 						</div>
@@ -18,9 +19,15 @@ export default function StoreNews({ storeNews }) {
 							<h3>{item.newsTitle}</h3>
 							<h5>{new Date(item.newsDate).toLocaleDateString('nl-NL')}</h5>
 							<p>{item.newsText}</p>
-							{/* <Link className='button' to={`/nieuws/${item.slug.current}`}>
-								Lees meer
-							</Link> */}
+							{!disableLink ? (
+								<Link className='button' to={`/nieuws/#${item.slug.current}`}>
+									Lees meer
+								</Link>
+							) : (
+								<Link className='button' to={`/#laatste-nieuws`}>
+									Ga Terug
+								</Link>
+							)}
 						</div>
 					</div>
 				))}
@@ -32,7 +39,10 @@ export default function StoreNews({ storeNews }) {
 const StoreNewsStyles = styled.div`
 	.news {
 		display: flex;
-		margin: 3rem 0;
+		padding-top: ${({ disableLink }) => (disableLink ? '100px' : '2rem')};
+		&:last-child {
+			padding-bottom: 3rem;
+		}
 	}
 
 	.text {

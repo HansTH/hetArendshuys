@@ -1,7 +1,8 @@
 import React from 'react';
-import Image from 'gatsby-image';
+
 import styled from 'styled-components';
 import BrandCard from './BrandCard';
+import BrandTag from './BrandTag';
 import { breakpoint } from '../../styles/breakpoints';
 
 export default function BrandsList({ data }) {
@@ -9,20 +10,19 @@ export default function BrandsList({ data }) {
 	const brandList = data.brands.nodes;
 	return (
 		<BrandStyles>
-			<div className='store-container'>
-				<div className='container'>
-					<div className=' store-image-right'>
-						<div className='store-info'>
-							<p>{storeInfo.storeInfo}</p>
-						</div>
-						<div className='store-images'>
-							{storeInfo.storeImages.map((image, index) => (
-								<Image key={index} fixed={image.asset.fixed} alt='store' />
-							))}
-						</div>
+			<div className='container'>
+				<div className=' brand-tags-container'>
+					<div className='brand-tags'>
+						{brandList.map((brand) => (
+							<BrandTag key={brand.id} brand={brand} />
+						))}
+					</div>
+					<div className='brand-info'>
+						<p>{storeInfo.storeInfo}</p>
 					</div>
 				</div>
 			</div>
+
 			{brandList.map((brand, index) => (
 				<BrandCard key={brand.id} brand={brand} index={index} />
 			))}
@@ -31,48 +31,38 @@ export default function BrandsList({ data }) {
 }
 
 const BrandStyles = styled.div`
-	.store-container {
-		background-color: var(--light-yellow);
+	background-color: var(--light-yellow);
+
+	.brand-tags {
+		text-align: center;
 	}
 
-	.store-image-right {
+	.brand-tags-container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 		padding-bottom: 3rem;
 	}
 
-	.store-images {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-		margin-left: 1rem;
-	}
-
 	@media ${breakpoint.md} {
-		.store-container {
-			/* display: flex; */
+		.brand-container {
 			flex-direction: column;
 		}
 
-		.store-image-right {
+		.brand-tags {
+			padding-top: 1rem;
+		}
+
+		.brand-tags-container {
 			display: flex;
-			flex-direction: column;
-		}
-
-		.store-info {
-			width: 100%;
-			padding: 1rem 0;
+			flex-direction: column-reverse;
 		}
 	}
 
 	@media ${breakpoint.sm} {
-		.store-image-right {
+		.brand-tags-container {
 			padding: 0;
 			padding-bottom: 1rem;
-		}
-		.store-images {
-			margin-left: 0;
 		}
 
 		.gatsby-image-wrapper {
@@ -82,17 +72,9 @@ const BrandStyles = styled.div`
 	}
 
 	@media ${breakpoint.xs} {
-		.store-image-right {
-			padding: 0;
-			padding-bottom: 1rem;
-		}
-		.store-images {
-			margin-left: 0;
-		}
-
 		.gatsby-image-wrapper {
-			width: 140px !important;
-			height: 140px !important;
+			width: 120px !important;
+			height: 120px !important;
 		}
 	}
 `;

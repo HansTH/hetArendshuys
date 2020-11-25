@@ -6,7 +6,7 @@ export default function NavLinks({ flexDirection, toggleSideNavbar }) {
 	return (
 		<NavLinksStyles flexDirection={flexDirection}>
 			<Link onClick={toggleSideNavbar} to='/'>
-				Winkel
+				Home
 			</Link>
 			<Link onClick={toggleSideNavbar} to='/merken'>
 				Merken

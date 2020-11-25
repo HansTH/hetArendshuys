@@ -9,6 +9,7 @@ export default function SideNavbar({
 	hasScrolled,
 	isSideNavbarOpen,
 	toggleSideNavbar,
+	socialLinks,
 }) {
 	return (
 		<div className='container'>
@@ -26,7 +27,7 @@ export default function SideNavbar({
 					/>
 				</div>
 				<div className='side-social-links'>
-					<SocialLinks flexDirection='row' />
+					<SocialLinks flexDirection='row' links={socialLinks} />
 				</div>
 			</SideNavbarStyles>
 		</div>

@@ -10,6 +10,8 @@ export default function Footer({ footerInfo }) {
 	const currentYear = new Date().getFullYear();
 	const contactInfo = footerInfo.nodes[0].contactInfo;
 	const storeHours = footerInfo.nodes[0].storeHours;
+	const socialMediaLinks = footerInfo.nodes[0].socialMediaData;
+
 	return (
 		<FooterStyles>
 			<div className='container'>
@@ -18,7 +20,7 @@ export default function Footer({ footerInfo }) {
 						<StoreContact contactInfo={contactInfo} />
 					</div>
 					<div className='social'>
-						<SocialLinks />
+						<SocialLinks links={socialMediaLinks} />
 					</div>
 					<div className='store-hours'>
 						<StoreHours storeHours={storeHours} />

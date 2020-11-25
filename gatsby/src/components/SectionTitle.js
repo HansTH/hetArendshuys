@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from '../styles/breakpoints';
-export default function SectionTitle({ children, title, bgColor }) {
+export default function SectionTitle({ children, title, bgColor, id }) {
 	return (
-		<SectionTitleStyles bgColor={bgColor}>
+		<SectionTitleStyles bgColor={bgColor} id={id}>
 			<div className='container'>
 				<h2 className='section-title'>{title}</h2>
 				{children}
@@ -14,13 +14,13 @@ export default function SectionTitle({ children, title, bgColor }) {
 
 const SectionTitleStyles = styled.section`
 	background-color: ${({ bgColor }) => bgColor};
-	padding: 3rem 0;
 
 	.section-title {
-		color: var(--blue);
+		color: ${({ bgColor }) =>
+			bgColor === 'var(--blue)' ? 'var(--yellow)' : 'var(--blue)'};
 		text-align: center;
-		text-transform: capitalize;
-		padding-bottom: 2rem;
+		padding-top: 100px;
+		padding-bottom: 1rem;
 	}
 
 	@media ${breakpoint.sm} {

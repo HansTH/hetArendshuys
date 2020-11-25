@@ -20,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
     color: var(--blue);
+    scroll-behavior:smooth;
+    background-color: var(--light-yellow)
   }
 
   h1{
@@ -65,8 +67,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .gatsby-image-wrapper {
-			/* width: 250px !important; */
-			/* height: 250px !important; */
 
       img {
         border-radius: 10px;

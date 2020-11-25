@@ -21,7 +21,7 @@ export const data = graphql`
 				}
 			}
 		}
-		brands: allSanityBrands {
+		brands: allSanityBrands(sort: { fields: brandName, order: ASC }) {
 			nodes {
 				id
 				brandName
