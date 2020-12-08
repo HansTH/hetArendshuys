@@ -19,12 +19,13 @@ const SectionTitleStyles = styled.section`
 		color: ${({ bgColor }) =>
 			bgColor === 'var(--blue)' ? 'var(--yellow)' : 'var(--blue)'};
 		text-align: center;
-		padding-top: 100px;
+		padding-top: 50px;
 		padding-bottom: 1rem;
 	}
 
 	@media ${breakpoint.sm} {
 		.section-title {
+			padding-top: 50px;
 			padding-bottom: 0rem;
 		}
 	}

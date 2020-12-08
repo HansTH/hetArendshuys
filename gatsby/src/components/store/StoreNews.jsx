@@ -68,6 +68,7 @@ const StoreNewsStyles = styled.div`
 		.news {
 			flex-direction: column;
 			align-items: center;
+			padding-top: 50px;
 		}
 
 		.text {
