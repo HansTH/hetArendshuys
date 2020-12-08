@@ -1,16 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function StoreContact({ contactInfo }) {
-	const {
-		storeName,
-		slogan,
-		address,
-		zipcode,
-		city,
-		telefoonNumber,
-		email,
-	} = contactInfo;
+export default function StoreContact({ contact }) {
+	const { address, zipcode, city, telefoonNumber, email } = contact.contactInfo;
 	return (
 		<ContactInfoStyles>
 			<thead>
@@ -20,7 +12,7 @@ export default function StoreContact({ contactInfo }) {
 			</thead>
 			<tbody>
 				<tr>
-					<td>{`${storeName} - ${slogan}`}</td>
+					<td>{`${contact.storeName} - ${contact.slogan}`}</td>
 				</tr>
 				<tr>
 					<td>{address}</td>

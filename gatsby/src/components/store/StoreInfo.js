@@ -3,14 +3,12 @@ import Image from 'gatsby-image';
 import styled from 'styled-components';
 import { breakpoint } from '../../styles/breakpoints';
 
-export default function StoreInfo({ data }) {
-	const { storeInfo, smallStoreImg } = data.storeInfo.nodes[0];
-
+export default function StoreInfo({ storeInfo }) {
 	return (
 		<StoreInfoStyles>
-			<p>{storeInfo}</p>
+			<p>{storeInfo.storeInfo}</p>
 			<div className='images-grid'>
-				{smallStoreImg.map((image) => (
+				{storeInfo.smallStoreImg.map((image) => (
 					<Image key={image.asset.id} fixed={image.asset.fixed} alt='image' />
 				))}
 			</div>

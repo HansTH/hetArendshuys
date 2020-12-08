@@ -6,7 +6,9 @@ import BrandTag from './BrandTag';
 import { breakpoint } from '../../styles/breakpoints';
 
 export default function BrandsList({ data }) {
-	const storeInfo = data.storeInfo.nodes[0];
+	const [storeInfo] = data.storeInfo.nodes;
+	const info = storeInfo.winkel.storeInfo;
+
 	const brandList = data.brands.nodes;
 	return (
 		<BrandStyles>
@@ -18,7 +20,7 @@ export default function BrandsList({ data }) {
 						))}
 					</div>
 					<div className='brand-info'>
-						<p>{storeInfo.storeInfo}</p>
+						<p>{info}</p>
 					</div>
 				</div>
 			</div>

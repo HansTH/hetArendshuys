@@ -8,24 +8,27 @@ import StoreNews from '../components/store/StoreNews';
 
 export const data = graphql`
 	{
-		storeInfo: allSanityStore {
+		storeInfo: allSanityWinkel {
 			nodes {
 				id
-				storeInfo
-				storeName
-				smallStoreImg: storeImages {
-					asset {
-						id
-						fixed(width: 250, height: 250) {
-							...GatsbySanityImageFixed
+				store: winkel {
+					slogan
+					storeInfo
+					storeName
+					smallStoreImg: storeImages {
+						asset {
+							id
+							fixed(width: 250, height: 250) {
+								...GatsbySanityImageFixed
+							}
 						}
 					}
-				}
-				largeStoreImg: storeImages {
-					asset {
-						id
-						fluid(maxWidth: 1200) {
-							...GatsbySanityImageFluid
+					largeStoreImg: storeImages {
+						asset {
+							id
+							fluid(maxWidth: 1200) {
+								...GatsbySanityImageFluid
+							}
 						}
 					}
 				}
@@ -65,13 +68,16 @@ export const data = graphql`
 `;
 
 export default function Home({ data }) {
-	const imageArray = data.storeInfo.nodes[0].largeStoreImg;
-	const bgImg = randomIndex(imageArray);
-	const [bgImage, setBgImage] = useState(bgImg);
+	const [{ store }] = data.storeInfo.nodes;
 
+	const imageArray = store.largeStoreImg;
+
+	const bgImg = randomIndex(imageArray);
 	function randomIndex(a) {
 		return a[Math.floor(Math.random() * a.length)];
 	}
+
+	const [bgImage, setBgImage] = useState(bgImg);
 
 	function handleBgImage(bgImage) {
 		setBgImage(bgImage);
@@ -80,11 +86,8 @@ export default function Home({ data }) {
 	return (
 		<>
 			<Header bgImage={bgImage.asset.fluid} />
-			<SectionTitle
-				title={data.storeInfo.nodes[0].storeName}
-				bgColor='var(--light-yellow)'
-			>
-				<StoreInfo data={data} handleBgImage={handleBgImage} />
+			<SectionTitle title={store.storeName} bgColor='var(--light-yellow)'>
+				<StoreInfo storeInfo={store} handleBgImage={handleBgImage} />
 			</SectionTitle>
 			<SectionTitle title='Onze Merken' bgColor='var(--blue)'>
 				<BrandLogo storeBrands={data.storeBrands} />

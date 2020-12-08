@@ -61,39 +61,43 @@ export default function Layout({ children }) {
 
 	const data = useStaticQuery(graphql`
 		{
-			storeData: allSanityStore {
+			storeData: allSanityWinkel {
 				nodes {
-					storeHours {
-						openingHour
-						day
-						closed
-						closeHour
-					}
-					contactInfo {
-						zipcode
-						telefoonNumber
+					winkel {
 						storeName
 						slogan
-						email
-						city
-						address
-					}
-					socialMediaData: socialMediaLinks {
-						socialMediaUrl
-						socialMediaName
+						storeHours {
+							openingHour
+							day
+							closed
+							closeHour
+						}
+						contactInfo {
+							zipcode
+							telefoonNumber
+							email
+							city
+							address
+						}
+						socialMediaData: socialMediaLinks {
+							socialMediaUrl
+							socialMediaName
+						}
 					}
 				}
 			}
 		}
 	`);
 
+	const [socialMediaData] = data.storeData.nodes;
+	const socialMediaLinks = socialMediaData.socialMediaData;
 	return (
 		<LayoutStyles fixedPosition={fixedPosition}>
 			<GlobalStyles />
 			<TopNavbar
 				hasScrolled={hasScrolled}
 				fixedPostion={fixedPosition}
-				socialLinks={data.storeData.nodes[0].socialMediaData}
+				socialLinks={socialMediaLinks}
 			/>
 			<Menubutton
 				isSideNavbarOpen={isSideNavbarOpen}
@@ -105,7 +109,7 @@ export default function Layout({ children }) {
 					isSideNavbarOpen={isSideNavbarOpen}
 					toggleSideNavbar={handleToggleSideNavbar}
 					hasScrolled={hasScrolled}
-					socialLinks={data.storeData.nodes[0].socialMediaData}
+					socialLinks={socialMediaLinks}
 				/>
 			</div>
 			<Footer footerInfo={data.storeData} />

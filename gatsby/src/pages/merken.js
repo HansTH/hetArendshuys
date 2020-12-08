@@ -7,15 +7,17 @@ import { breakpoint } from '../styles/breakpoints';
 
 export const data = graphql`
 	{
-		storeInfo: allSanityStore {
+		storeInfo: allSanityWinkel {
 			nodes {
 				id
-				storeInfo
-				storeImages {
-					asset {
-						id
-						fixed(height: 150, width: 250) {
-							...GatsbySanityImageFixed
+				winkel {
+					storeInfo
+					storeImages {
+						asset {
+							id
+							fixed(height: 150, width: 250) {
+								...GatsbySanityImageFixed
+							}
 						}
 					}
 				}
@@ -44,7 +46,7 @@ export const data = graphql`
 export default function merken({ data }) {
 	return (
 		<MerkenStyles>
-			<SectionTitle title='Onze Merken' bgColor={`var(--light-yellow)`} />
+			<SectionTitle title='Onze Merken' bgColor='var(--light-yellow)' />
 			<BrandsList data={data} />
 		</MerkenStyles>
 	);

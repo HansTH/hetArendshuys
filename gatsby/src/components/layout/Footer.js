@@ -8,16 +8,21 @@ import StoreHours from '../store/StoreHours';
 
 export default function Footer({ footerInfo }) {
 	const currentYear = new Date().getFullYear();
-	const contactInfo = footerInfo.nodes[0].contactInfo;
-	const storeHours = footerInfo.nodes[0].storeHours;
-	const socialMediaLinks = footerInfo.nodes[0].socialMediaData;
+	const [winkel] = footerInfo.nodes;
+	const {
+		contactInfo,
+		storeHours,
+		socialMediaLinks,
+		storeName,
+		slogan,
+	} = winkel.winkel;
 
 	return (
 		<FooterStyles>
 			<div className='container'>
 				<div className='footer'>
 					<div className='contact'>
-						<StoreContact contactInfo={contactInfo} />
+						<StoreContact contact={{ contactInfo, storeName, slogan }} />
 					</div>
 					<div className='social'>
 						<SocialLinks links={socialMediaLinks} />
