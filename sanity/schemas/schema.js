@@ -5,12 +5,15 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Schemas
-import storeInfo from './storeInfo';
-import storeContact from './storeContact';
-import storeNews from './storeNews';
-import storeBrands from './storeBrands';
-import openHours from './openHours';
-import socialMediaLink from './socialMediaLink';
+// documents
+import storeNews from './documents/storeNews';
+import storeBrands from './documents/storeBrands';
+import winkel from './documents/winkel';
+// objects
+import storeInfo from './objects/storeInfo';
+import storeContact from './objects/storeContact';
+import openHour from './objects/openHour';
+import socialMediaLink from './objects/socialMediaLink';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,7 +27,8 @@ export default createSchema({
 		storeInfo,
 		storeNews,
 		storeBrands,
-		openHours,
+		openHour,
 		socialMediaLink,
+		winkel,
 	]),
 });

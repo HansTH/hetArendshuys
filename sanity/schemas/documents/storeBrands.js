@@ -1,6 +1,9 @@
+import { GiPorcelainVase as Vase } from 'react-icons/gi';
+
 export default {
 	title: 'Merken',
 	name: 'brands',
+	icon: Vase,
 	type: 'document',
 	fields: [
 		{
@@ -11,10 +14,13 @@ export default {
 		{
 			title: 'Slug',
 			name: 'slug',
+			description:
+				'Belangrijk! Klik de "Generate" button, om automatisch een naam te genereren.',
 			type: 'slug',
+			validation: (Rule) => Rule.required(),
 			options: {
 				source: 'brandName',
-				maxLength: 100,
+				maxLength: 99,
 			},
 		},
 		{
@@ -27,7 +33,7 @@ export default {
 			name: 'brandImages',
 			type: 'array',
 			of: [{ type: 'image' }],
-			validation: (Rule) => Rule.max(4).warning('Maximaal 4 fotos.'),
+			validation: (Rule) => Rule.max(4).warning("Maximaal 4 foto's."),
 		},
 	],
 };

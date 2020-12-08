@@ -4,18 +4,6 @@ export default {
 	type: 'object',
 	fields: [
 		{
-			title: 'Winkel Naam',
-			name: 'storeName',
-			description: 'Naam van uw winkel?',
-			type: 'string',
-		},
-		{
-			title: 'Slogan',
-			name: 'slogan',
-			description: 'Korte slogan.',
-			type: 'string',
-		},
-		{
 			title: 'Adres',
 			name: 'address',
 			description: 'Straatnaam van de winkel.',

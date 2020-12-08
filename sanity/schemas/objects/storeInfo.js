@@ -1,32 +1,36 @@
 export default {
 	title: 'Winkel',
-	name: 'store',
-	type: 'document',
+	name: 'storeInfo',
+	type: 'object',
 	fields: [
 		{
 			title: 'Winkel Naam',
 			name: 'storeName',
-			description: 'De Naam van uw winkel.',
+			description: 'Naam van uw winkel?',
 			type: 'string',
 		},
 		{
 			title: 'Winkel Slogan',
-			name: 'storeSlogan',
-			description:
-				'Een pakkende slogan voor uw winkel (bijv. Stijlvol Wonen, ...).',
+			name: 'slogan',
+			description: 'Korte duidelijke slogan.',
 			type: 'string',
+		},
+		{
+			title: 'Winkel Adresgegevens',
+			name: 'contactInfo',
+			type: 'storeContactInfo',
 		},
 		{
 			title: 'Winkel Informatie',
 			name: 'storeInfo',
-			description: 'Vertel iets over de winkel',
+			description: 'Vertel iets over uw winkel',
 			type: 'text',
 			validation: (Rule) => Rule.max(750).warning('Maximaal 700 characters.'),
 		},
 		{
 			title: 'Winkel Fotos',
 			name: 'storeImages',
-			description: 'Vier fotos van de winkel.',
+			description: 'Vier fotos van uw winkel.',
 			type: 'array',
 			of: [{ type: 'image' }],
 			validation: (Rule) => Rule.max(4).warning('Maximaal 4 fotos.'),
@@ -35,16 +39,13 @@ export default {
 			title: 'Winkel Openingstijden',
 			name: 'storeHours',
 			type: 'array',
-			of: [{ type: 'openHours' }],
+			of: [{ type: 'openHour' }],
 		},
-		{
-			title: 'Winkel Adresgegevens',
-			name: 'contactInfo',
-			type: 'storeContactInfo',
-		},
+
 		{
 			title: 'Social Media Links',
 			name: 'socialMediaLinks',
+			description: 'De link van uw social media profiel',
 			type: 'array',
 			of: [{ type: 'socialMediaLink' }],
 		},

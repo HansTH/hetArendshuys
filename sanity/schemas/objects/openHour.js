@@ -1,8 +1,10 @@
+import { BsClock as Clock } from 'react-icons/bs';
+
 export default {
-	title: 'Openingstijden',
-	name: 'openHours',
+	title: 'Openingstijd',
+	name: 'openHour',
+	icon: Clock,
 	type: 'object',
-	fieldset: [{ title: 'Maandag', value: 'monday' }],
 	fields: [
 		{
 			title: 'Dag',
@@ -32,4 +34,18 @@ export default {
 			},
 		},
 	],
+	preview: {
+		select: {
+			title: 'day',
+			openHour: 'openingHour',
+			closeHour: 'closeHour',
+			closed: 'closed',
+		},
+		prepare({ title, openHour, closeHour, closed }) {
+			return {
+				title,
+				subtitle: closed ? 'Gesloten' : `${openHour} - ${closeHour}`,
+			};
+		},
+	},
 };
