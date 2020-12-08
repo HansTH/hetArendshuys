@@ -71,10 +71,10 @@ export default function Home({ data }) {
 	const [{ store }] = data.storeInfo.nodes;
 	const imageArray = store.largeStoreImg;
 
-	const [bgImage, setBgImage] = useState(bgImg);
-
 	// pick a random image from the array
 	const bgImg = randomIndex(imageArray);
+
+	const [bgImage, setBgImage] = useState(bgImg);
 
 	function randomIndex(array) {
 		return array[Math.floor(Math.random() * array.length)];
