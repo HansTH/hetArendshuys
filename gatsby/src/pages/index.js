@@ -69,27 +69,30 @@ export const data = graphql`
 
 export default function Home({ data }) {
 	const [{ store }] = data.storeInfo.nodes;
-
 	const imageArray = store.largeStoreImg;
-
-	const bgImg = randomIndex(imageArray);
-	function randomIndex(a) {
-		return a[Math.floor(Math.random() * a.length)];
-	}
 
 	const [bgImage, setBgImage] = useState(bgImg);
 
-	function handleBgImage(bgImage) {
-		setBgImage(bgImage);
+	// pick a random image from the array
+	const bgImg = randomIndex(imageArray);
+
+	function randomIndex(array) {
+		return array[Math.floor(Math.random() * array.length)];
+	}
+
+	// set and show the clicked image in Header component
+	function handleBgImage(bgImage, index) {
+		setBgImage(bgImage.largeStoreImg[index]);
+		window.scrollTo(0, 0);
 	}
 
 	return (
 		<>
-			<Header bgImage={bgImage.asset.fluid} />
+			<Header id='home' bgImage={bgImage} />
 			<SectionTitle title={store.storeName} bgColor='var(--light-yellow)'>
 				<StoreInfo storeInfo={store} handleBgImage={handleBgImage} />
 			</SectionTitle>
-			<SectionTitle title='Onze Merken' bgColor='var(--blue)'>
+			<SectionTitle title='Onze Merken' bgColor='var(--blue)' id='merken'>
 				<BrandLogo storeBrands={data.storeBrands} />
 			</SectionTitle>
 			<SectionTitle

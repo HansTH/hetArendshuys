@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 export default function Header({ bgImage }) {
-	return <HeaderStyles bgImage={bgImage} />;
+	return <HeaderStyles bgImage={bgImage.asset.fluid} />;
 }
 
 const HeaderStyles = styled.div`

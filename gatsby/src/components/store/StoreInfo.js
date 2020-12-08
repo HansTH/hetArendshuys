@@ -3,13 +3,19 @@ import Image from 'gatsby-image';
 import styled from 'styled-components';
 import { breakpoint } from '../../styles/breakpoints';
 
-export default function StoreInfo({ storeInfo }) {
+export default function StoreInfo({ storeInfo, handleBgImage }) {
 	return (
 		<StoreInfoStyles>
 			<p>{storeInfo.storeInfo}</p>
 			<div className='images-grid'>
-				{storeInfo.smallStoreImg.map((image) => (
-					<Image key={image.asset.id} fixed={image.asset.fixed} alt='image' />
+				{storeInfo.smallStoreImg.map((image, index) => (
+					<div
+						key={image.asset.id}
+						onClick={() => handleBgImage(storeInfo, index)}
+						className='hover-image'
+					>
+						<Image fixed={image.asset.fixed} alt='image' />
+					</div>
 				))}
 			</div>
 		</StoreInfoStyles>
@@ -25,6 +31,14 @@ const StoreInfoStyles = styled.div`
 		margin: 2rem 0;
 	}
 
+	.hover-image {
+		transition: all ease-in-out 0.2s;
+
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.05);
+		}
+	}
 	.gatsby-image-wrapper {
 		margin: 0.5rem;
 	}
