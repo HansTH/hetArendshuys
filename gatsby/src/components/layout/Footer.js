@@ -60,6 +60,8 @@ const FooterStyles = styled.footer`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		font-size: 1rem;
+		letter-spacing: 1px;
 
 		a {
 			color: var(--light-yellow);
@@ -71,8 +73,8 @@ const FooterStyles = styled.footer`
 		}
 
 		img {
-			width: 20px;
-			height: 20px;
+			width: 25px;
+			height: 25px;
 			margin: 0 0.5rem;
 		}
 	}

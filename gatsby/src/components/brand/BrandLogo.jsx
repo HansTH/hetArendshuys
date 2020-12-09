@@ -57,6 +57,7 @@ export default function BrandLogo({ storeBrands }) {
 
 const BrandLogoStyles = styled.div`
 	padding-bottom: 2rem;
+
 	.brand-card {
 		display: flex !important;
 		justify-content: center;
@@ -64,12 +65,16 @@ const BrandLogoStyles = styled.div`
 		text-align: center;
 		width: 250px !important;
 		margin: 2rem auto;
-		background-color: var(--white);
+		background-color: var(--light-yellow);
 		border: 3px solid var(--yellow);
 		border-radius: 10px;
 		box-shadow: 2px 5px 20px 0 rgba(1, 50, 95, 0.3);
 		transition: all ease-in-out 0.3s;
 		height: 150px;
+
+		a {
+			padding: 2rem 3rem;
+		}
 
 		&:hover,
 		&:focus {
@@ -78,7 +83,7 @@ const BrandLogoStyles = styled.div`
 
 		h2 {
 			padding: 0;
-			color: var(--yellow);
+			color: var(--blue);
 		}
 	}
 

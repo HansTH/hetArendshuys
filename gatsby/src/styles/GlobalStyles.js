@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 import { breakpoint } from './breakpoints';
 
 const GlobalStyles = createGlobalStyle`
+  
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
 
   *{
     padding: 0;
@@ -17,8 +19,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
     color: var(--blue);
     scroll-behavior:smooth;
     background-color: var(--light-yellow)
@@ -34,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
 
   h3{
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   h5 {
@@ -45,6 +47,7 @@ const GlobalStyles = createGlobalStyle`
 
   p{
     font-size: 1.2rem;
+    font-weight:300;
     line-height: 1.2
   }
 

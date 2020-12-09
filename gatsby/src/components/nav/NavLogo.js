@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../../assets/images/arendshuys-logo.png';
+import logo from '../../assets/images/arendshuys-logo.svg';
 
 export default function NavLogo() {
 	return (

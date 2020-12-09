@@ -31,12 +31,13 @@ const StoreHoursStyles = styled.table`
 	font-size: 1.1rem;
 
 	th {
-		font-weight: bold;
+		font-weight: 500;
 		padding-bottom: 0.5rem;
 		text-align: left;
 		color: var(--yellow);
 	}
 	td {
 		padding: 0.2rem 0;
+		font-weight: 300;
 	}
 `;
