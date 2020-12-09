@@ -31,6 +31,9 @@ export default function brandCard({ brand, index }) {
 }
 
 const BrandCardStyles = styled.div`
+	border-top: 6px solid var(--blue);
+	border-bottom: 6px solid var(--blue);
+
 	.brand-container {
 		background-color: ${({ index }) =>
 			index % 2 === 0 ? 'var(--yellow)' : 'var(--light-yellow)'};
@@ -44,9 +47,8 @@ const BrandCardStyles = styled.div`
 		grid-area: image;
 
 		img {
-			border: 3px solid
-				${({ index }) =>
-					index % 2 === 0 ? 'var(--light-yellow)' : 'var(--yellow)'};
+			border: 3px solid var(--blue);
+			// ${({ index }) => (index % 2 === 0 ? 'var(--blue)' : 'var(--yellow)')};
 		}
 	}
 

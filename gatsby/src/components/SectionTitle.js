@@ -17,7 +17,7 @@ const SectionTitleStyles = styled.section`
 
 	.section-title {
 		color: ${({ bgColor }) =>
-			bgColor === 'var(--blue)' ? 'var(--yellow)' : 'var(--blue)'};
+			bgColor === 'var(--blue)' ? 'var(--light-yellow)' : 'var(--blue)'};
 		text-align: center;
 		padding-top: 50px;
 		padding-bottom: 1rem;

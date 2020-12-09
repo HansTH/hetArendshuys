@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
 
   h5 {
 			font-style: italic;
-			font-weight: 200;
+			font-weight: 300;
 			margin-bottom: 0.5rem;
 		}
 
