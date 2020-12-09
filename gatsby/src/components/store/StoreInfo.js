@@ -9,13 +9,20 @@ export default function StoreInfo({ storeInfo, handleBgImage }) {
 			<p>{storeInfo.storeInfo}</p>
 			<div className='images-grid'>
 				{storeInfo.smallStoreImg.map((image, index) => (
-					<div
+					<a
+						href='#home'
+						className='hover-image'
 						key={image.asset.id}
 						onClick={() => handleBgImage(storeInfo, index)}
-						className='hover-image'
+						/* ESLint warning: Visible, non-interactive elements with 
+							click handlers must have at least one keyboard listener 
+						*/
+						// onKeyPress={() => handleBgImage(storeInfo, index)}
+						// role='button'
+						// tabIndex='0'
 					>
 						<Image fixed={image.asset.fixed} alt='image' />
-					</div>
+					</a>
 				))}
 			</div>
 		</StoreInfoStyles>
