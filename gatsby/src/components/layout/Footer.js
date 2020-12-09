@@ -8,14 +8,14 @@ import StoreHours from '../store/StoreHours';
 
 export default function Footer({ footerInfo }) {
 	const currentYear = new Date().getFullYear();
-	const [winkel] = footerInfo.nodes;
+	const [{ winkel }] = footerInfo.nodes;
 	const {
 		contactInfo,
 		storeHours,
-		socialMediaLinks,
+		socialMediaData,
 		storeName,
 		slogan,
-	} = winkel.winkel;
+	} = winkel;
 
 	return (
 		<FooterStyles>
@@ -25,7 +25,7 @@ export default function Footer({ footerInfo }) {
 						<StoreContact contact={{ contactInfo, storeName, slogan }} />
 					</div>
 					<div className='social'>
-						<SocialLinks links={socialMediaLinks} />
+						<SocialLinks links={socialMediaData} />
 					</div>
 					<div className='store-hours'>
 						<StoreHours storeHours={storeHours} />

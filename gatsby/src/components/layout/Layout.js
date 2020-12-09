@@ -89,15 +89,16 @@ export default function Layout({ children }) {
 		}
 	`);
 
-	const [socialMediaData] = data.storeData.nodes;
-	const socialMediaLinks = socialMediaData.socialMediaData;
+	const [{ winkel }] = data.storeData.nodes;
+
+	console.log('data', winkel);
 	return (
 		<LayoutStyles fixedPosition={fixedPosition}>
 			<GlobalStyles />
 			<TopNavbar
 				hasScrolled={hasScrolled}
 				fixedPostion={fixedPosition}
-				socialLinks={socialMediaLinks}
+				socialLinks={winkel.socialMediaData}
 			/>
 			<Menubutton
 				isSideNavbarOpen={isSideNavbarOpen}
@@ -109,7 +110,7 @@ export default function Layout({ children }) {
 					isSideNavbarOpen={isSideNavbarOpen}
 					toggleSideNavbar={handleToggleSideNavbar}
 					hasScrolled={hasScrolled}
-					socialLinks={socialMediaLinks}
+					socialLinks={winkel.socialMediaData}
 				/>
 			</div>
 			<Footer footerInfo={data.storeData} />
