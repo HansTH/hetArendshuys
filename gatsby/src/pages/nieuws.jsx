@@ -4,6 +4,7 @@ import StoreNews from '../components/store/StoreNews';
 import SectionTitle from '../components/SectionTitle';
 import styled from 'styled-components';
 import { breakpoint } from '../styles/breakpoints';
+import SEO from '../components/SEO';
 
 export const query = graphql`
 	query {
@@ -30,11 +31,14 @@ export const query = graphql`
 
 export default function nieuws({ data }) {
 	return (
-		<NieuwsStyles>
-			<SectionTitle title='Nieuws' bgColor='var(--light-yellow);'>
-				<StoreNews storeNews={data.storeNews} disableLink={true} />
-			</SectionTitle>
-		</NieuwsStyles>
+		<>
+			<SEO title='Nieuws' />
+			<NieuwsStyles>
+				<SectionTitle title='Nieuws' bgColor='var(--light-yellow);'>
+					<StoreNews storeNews={data.storeNews} disableLink={true} />
+				</SectionTitle>
+			</NieuwsStyles>
+		</>
 	);
 }
 

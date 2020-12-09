@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import BrandsList from '../components/brand/BrandsList';
 import SectionTitle from '../components/SectionTitle';
 import { breakpoint } from '../styles/breakpoints';
+import SEO from '../components/SEO';
 
 export const data = graphql`
 	{
@@ -45,10 +46,13 @@ export const data = graphql`
 
 export default function merken({ data }) {
 	return (
-		<MerkenStyles>
-			<SectionTitle title='Onze Merken' bgColor='var(--light-yellow)' />
-			<BrandsList data={data} />
-		</MerkenStyles>
+		<>
+			<SEO title='Merken' />
+			<MerkenStyles>
+				<SectionTitle title='Onze Merken' bgColor='var(--light-yellow)' />
+				<BrandsList data={data} />
+			</MerkenStyles>
+		</>
 	);
 }
 

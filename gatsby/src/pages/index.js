@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import SectionTitle from '../components/SectionTitle';
 import StoreInfo from '../components/store/StoreInfo';
 import StoreNews from '../components/store/StoreNews';
+import SEO from '../components/SEO';
 
 export const data = graphql`
 	{
@@ -88,6 +89,7 @@ export default function Home({ data }) {
 
 	return (
 		<>
+			<SEO image={bgImage?.asset?.fluid?.src} />
 			<Header id='home' bgImage={bgImage} />
 			<SectionTitle title={store.storeName} bgColor='var(--light-yellow)'>
 				<StoreInfo storeInfo={store} handleBgImage={handleBgImage} />
