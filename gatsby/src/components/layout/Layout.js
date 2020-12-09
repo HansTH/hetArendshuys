@@ -51,7 +51,8 @@ export default function Layout({ children }) {
 
 		if (
 			baseUri.current === 'https://dreamy-keller-d31d1e.netlify.app/' ||
-			baseUri.current === 'http://localhost:8000/'
+			baseUri.current === 'http://localhost:8000/' ||
+			baseUri.current === 'www.xyztest.nl/'
 		) {
 			setFixedPosition(false);
 		} else {
