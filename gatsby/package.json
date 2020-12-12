@@ -12,7 +12,8 @@
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-		"netlify": "netlify dev"
+		"netlify": "netlify dev",
+		"prebuild": "netlify-lambda install"
 	},
 	"dependencies": {
 		"cross-env": "^7.0.2",
