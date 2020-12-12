@@ -14,7 +14,7 @@ export default function NavLinks({ flexDirection, toggleSideNavbar }) {
 			<Link onClick={toggleSideNavbar} to='/nieuws'>
 				Nieuws
 			</Link>
-			<Link onClick={toggleSideNavbar} to='/'>
+			<Link onClick={toggleSideNavbar} to='/contact'>
 				Contact
 			</Link>
 		</NavLinksStyles>
