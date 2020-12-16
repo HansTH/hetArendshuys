@@ -65,10 +65,11 @@ const BrandLogoStyles = styled.div`
 		text-align: center;
 		width: 250px !important;
 		margin: 2rem auto;
-		background-color: var(--light-yellow);
+		background-color: var(--white);
 		border: 3px solid var(--yellow);
 		border-radius: 10px;
-		box-shadow: 2px 5px 20px 0 rgba(1, 50, 95, 0.3);
+		/* box-shadow: 2px 5px 20px 0 rgba(1, 50, 95, 0.3); */
+		box-shadow: 2px 4px 20px 0px rgba(255, 167, 0, 0.5);
 		transition: all ease-in-out 0.3s;
 		height: 150px;
 
@@ -84,6 +85,7 @@ const BrandLogoStyles = styled.div`
 		h2 {
 			padding: 0;
 			color: var(--blue);
+			font-weight: 500;
 		}
 	}
 

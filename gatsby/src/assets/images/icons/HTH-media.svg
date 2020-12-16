@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>HansTH-icon Copy</title>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>HTHlogo</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-2-Copy-2" transform="translate(-116.000000, -47.000000)">
-            <g id="HansTH-icon-Copy" transform="translate(116.000000, 47.000000)">
-                <path d="M45,1.35 C32.9463853,1.35 22.0338853,6.23569267 14.134789,14.134789 C6.23569267,22.0338853 1.35,32.9463853 1.35,45 C1.35,57.0536147 6.23569267,67.9661147 14.134789,75.865211 C22.0338853,83.7643073 32.9463853,88.65 45,88.65 C57.0536147,88.65 67.9661147,83.7643073 75.865211,75.865211 C83.7643073,67.9661147 88.65,57.0536147 88.65,45 C88.65,32.9463853 83.7643073,22.0338853 75.865211,14.134789 C67.9661147,6.23569267 57.0536147,1.35 45,1.35 Z" id="Rectangle" stroke="#FEFEFE" stroke-width="2.7" fill="#29354E"></path>
-                <g id="Group-3" transform="translate(14.000000, 23.000000)">
-                    <g id="Group" transform="translate(18.000000, 18.000000)" fill="#FCFCFC">
-                        <circle id="Oval" cx="13.5" cy="4.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-5" cx="22.5" cy="4.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-4" cx="4.5" cy="4.5" r="4.5"></circle>
-                        <circle id="Oval-Copy" cx="13.5" cy="13.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-2" cx="13.5" cy="22.5" r="4.5"></circle>
-                    </g>
-                    <g id="Group-2" fill="#F32D29">
-                        <circle id="Oval-Copy-13" cx="4.5" cy="22.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-12" cx="4.5" cy="13.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-11" cx="4.5" cy="4.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-10" cx="4.5" cy="31.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-9" cx="4.5" cy="40.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-23" cx="13.5" cy="22.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-22" cx="22.5" cy="13.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-21" cx="22.5" cy="4.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-20" cx="22.5" cy="31.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-19" cx="22.5" cy="40.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-18" cx="49.5" cy="22.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-17" cx="40.5" cy="13.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-16" cx="40.5" cy="4.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-15" cx="40.5" cy="31.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-14" cx="40.5" cy="40.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-28" cx="58.5" cy="22.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-27" cx="58.5" cy="13.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-26" cx="58.5" cy="4.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-25" cx="58.5" cy="31.5" r="4.5"></circle>
-                        <circle id="Oval-Copy-24" cx="58.5" cy="40.5" r="4.5"></circle>
+        <g id="Logo" transform="translate(-22.000000, 0.000000)">
+            <g id="nav-logo" transform="translate(22.000000, 0.000000)">
+                <g id="HTHlogo">
+                    <path d="M50,2 C36.745166,2 24.745166,7.372583 16.0588745,16.0588745 C7.372583,24.745166 2,36.745166 2,50 C2,63.254834 7.372583,75.254834 16.0588745,83.9411255 C24.745166,92.627417 36.745166,98 50,98 C63.254834,98 75.254834,92.627417 83.9411255,83.9411255 C92.627417,75.254834 98,63.254834 98,50 C98,36.745166 92.627417,24.745166 83.9411255,16.0588745 C75.254834,7.372583 63.254834,2 50,2 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="4" fill="#242E4C"></path>
+                    <g id="Group-3" transform="translate(15.000000, 25.000000)">
+                        <g id="Group-2">
+                            <g id="Group-5" transform="translate(20.000000, 20.000000)" fill="#FFFFFF">
+                                <circle id="Oval" cx="15" cy="5" r="5"></circle>
+                                <circle id="Oval-Copy-5" cx="25" cy="5" r="5"></circle>
+                                <circle id="Oval-Copy-4" cx="5" cy="5" r="5"></circle>
+                                <circle id="Oval-Copy" cx="15" cy="15" r="5"></circle>
+                                <circle id="Oval-Copy-2" cx="15" cy="25" r="5"></circle>
+                            </g>
+                            <circle id="Oval-Copy-13" fill="#F32D29" cx="5" cy="25" r="5"></circle>
+                            <circle id="Oval-Copy-12" fill="#F32D29" cx="5" cy="15" r="5"></circle>
+                            <circle id="Oval-Copy-11" fill="#F32D29" cx="5" cy="5" r="5"></circle>
+                            <circle id="Oval-Copy-10" fill="#F32D29" cx="5" cy="35" r="5"></circle>
+                            <circle id="Oval-Copy-9" fill="#F32D29" cx="5" cy="45" r="5"></circle>
+                            <circle id="Oval-Copy-23" fill="#F32D29" cx="15" cy="25" r="5"></circle>
+                            <circle id="Oval-Copy-22" fill="#F32D29" cx="25" cy="15" r="5"></circle>
+                            <circle id="Oval-Copy-21" fill="#F32D29" cx="25" cy="5" r="5"></circle>
+                            <circle id="Oval-Copy-20" fill="#F32D29" cx="25" cy="35" r="5"></circle>
+                            <circle id="Oval-Copy-19" fill="#F32D29" cx="25" cy="45" r="5"></circle>
+                            <circle id="Oval-Copy-18" fill="#F32D29" cx="55" cy="25" r="5"></circle>
+                            <circle id="Oval-Copy-17" fill="#F32D29" cx="45" cy="15" r="5"></circle>
+                            <circle id="Oval-Copy-16" fill="#F32D29" cx="45" cy="5" r="5"></circle>
+                            <circle id="Oval-Copy-15" fill="#F32D29" cx="45" cy="35" r="5"></circle>
+                            <circle id="Oval-Copy-14" fill="#F32D29" cx="45" cy="45" r="5"></circle>
+                            <circle id="Oval-Copy-28" fill="#F32D29" cx="65" cy="25" r="5"></circle>
+                            <circle id="Oval-Copy-27" fill="#F32D29" cx="65" cy="15" r="5"></circle>
+                            <circle id="Oval-Copy-26" fill="#F32D29" cx="65" cy="5" r="5"></circle>
+                            <circle id="Oval-Copy-25" fill="#F32D29" cx="65" cy="35" r="5"></circle>
+                            <circle id="Oval-Copy-24" fill="#F32D29" cx="65" cy="45" r="5"></circle>
+                        </g>
                     </g>
                 </g>
-                <text id="media" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="27.9970703" y="80">media</tspan>
-                </text>
             </g>
         </g>
     </g>

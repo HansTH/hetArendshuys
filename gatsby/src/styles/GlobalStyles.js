@@ -12,10 +12,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   :root{
-    --blue: #01315F;
+    --blue: #07284A;
+    --light-blue: #354768;
     --yellow: #F8BA0F;
-    --light-yellow: #FFE7B9;
-    --white: #FCF7EF;
+    --light-yellow: #FCE1AF;
+    --white: #FCF3E3;
   }
 
   html{
