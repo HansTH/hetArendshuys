@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 import { breakpoint } from '../../styles/breakpoints';
@@ -9,8 +10,8 @@ export default function StoreInfo({ storeInfo, handleBgImage }) {
 			<p>{storeInfo.storeInfo}</p>
 			<div className='images-grid'>
 				{storeInfo.smallStoreImg.map((image, index) => (
-					<a
-						href='#home'
+					<Link
+						to='/'
 						className='hover-image'
 						key={image.asset.id}
 						onClick={() => handleBgImage(storeInfo, index)}
@@ -22,7 +23,7 @@ export default function StoreInfo({ storeInfo, handleBgImage }) {
 						// tabIndex='0'
 					>
 						<Image fixed={image.asset.fixed} alt='image' />
-					</a>
+					</Link>
 				))}
 			</div>
 		</StoreInfoStyles>

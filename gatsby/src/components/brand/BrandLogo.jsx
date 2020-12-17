@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
-import { size } from '../../styles/breakpoints';
+import { breakpoint, size } from '../../styles/breakpoints';
 
 var settings = {
 	dots: true,
@@ -13,12 +13,17 @@ var settings = {
 	slidesToScroll: 1,
 	initialSlide: 0,
 	infinite: true,
+	centerMode: true,
+	centerPadding: '60px',
 	responsive: [
 		{
 			breakpoint: size.md,
 			settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2,
+
+				centerMode: true,
+				centerPadding: '70px',
 			},
 		},
 		{
@@ -26,6 +31,8 @@ var settings = {
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
+				centerMode: true,
+				centerPadding: '50px',
 			},
 		},
 	],
@@ -91,5 +98,18 @@ const BrandLogoStyles = styled.div`
 
 	.slick-dots li button:before {
 		color: var(--light-yellow) !important;
+	}
+
+	@media ${breakpoint.md} {
+		.brand-card {
+			width: 200px !important;
+			height: 150px;
+		}
+	}
+	@media ${breakpoint.sm} {
+		.brand-card {
+			width: 180px !important;
+			height: 130px;
+		}
 	}
 `;
