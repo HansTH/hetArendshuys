@@ -28,6 +28,7 @@ export default function contact() {
 
 const ContactStyles = styled.div`
 	margin-top: 100px;
+	margin-bottom: 3rem;
 
 	.contact-container {
 		display: flex;
@@ -60,7 +61,6 @@ const ContactStyles = styled.div`
 		.map {
 			width: 100%;
 			margin-left: 0;
-			margin-bottom: 3rem;
 		}
 	}
 `;
