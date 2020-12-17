@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -21,10 +22,14 @@ export default function StoreContact({ contact }) {
 					<td>{`${zipcode} ${city}`}</td>
 				</tr>
 				<tr>
-					<td>{telefoonNumber}</td>
+					<td>
+						<a href={`tel:${telefoonNumber}`}>{telefoonNumber}</a>
+					</td>
 				</tr>
 				<tr>
-					<td>{email}</td>
+					<td>
+						<Link to='/contact'>{email}</Link>
+					</td>
 				</tr>
 			</tbody>
 		</ContactInfoStyles>
@@ -45,5 +50,8 @@ const ContactInfoStyles = styled.table`
 	td {
 		padding: 0.2rem 0;
 		font-weight: 300;
+		a {
+			color: var(--light-yellow);
+		}
 	}
 `;

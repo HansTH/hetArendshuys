@@ -3,27 +3,31 @@ import styled from 'styled-components';
 import Contact from '../components/Contact';
 import ContactMap from '../components/ContactMap';
 import SectionTitle from '../components/SectionTitle';
+import SEO from '../components/SEO';
 import { breakpoint } from '../styles/breakpoints';
 
 export default function contact() {
 	return (
-		<ContactStyles>
-			<SectionTitle title='Contact'>
-				<div className='contact-container'>
-					<div className='contact'>
-						<Contact />
+		<>
+			<SEO title='Contact' />
+			<ContactStyles>
+				<SectionTitle title='Contact'>
+					<div className='contact-container'>
+						<div className='contact'>
+							<Contact />
+						</div>
+						<div className='map'>
+							<ContactMap />
+						</div>
 					</div>
-					<div className='map'>
-						<ContactMap />
-					</div>
-				</div>
-			</SectionTitle>
-		</ContactStyles>
+				</SectionTitle>
+			</ContactStyles>
+		</>
 	);
 }
 
 const ContactStyles = styled.div`
-	margin: 100px 0;
+	margin-top: 100px;
 
 	.contact-container {
 		display: flex;
@@ -42,6 +46,8 @@ const ContactStyles = styled.div`
 	}
 
 	@media ${breakpoint.sm} {
+		margin-top: 0;
+
 		.contact-container {
 			flex-direction: column;
 		}
@@ -54,6 +60,7 @@ const ContactStyles = styled.div`
 		.map {
 			width: 100%;
 			margin-left: 0;
+			margin-bottom: 3rem;
 		}
 	}
 `;

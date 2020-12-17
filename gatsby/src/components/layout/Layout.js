@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import GlobalStyles from '../../styles/GlobalStyles';
 import 'normalize.css';
 import Footer from './Footer';
-import Menubutton from '../nav/Menubutton';
 import TopNavbar from '../nav/TopNavbar';
 import SideNavbar from '../nav/SideNavbar';
 import { breakpoint } from '../../styles/breakpoints';
+import MobileNavbar from '../nav/MobileNavbar';
 
 export default function Layout({ children }) {
 	const SCROLL_HEIGHT = 200;
@@ -92,7 +92,6 @@ export default function Layout({ children }) {
 
 	const [{ winkel }] = data.storeData.nodes;
 
-	console.log('data', winkel);
 	return (
 		<LayoutStyles fixedPosition={fixedPosition}>
 			<GlobalStyles />
@@ -101,7 +100,8 @@ export default function Layout({ children }) {
 				fixedPostion={fixedPosition}
 				socialLinks={winkel.socialMediaData}
 			/>
-			<Menubutton
+
+			<MobileNavbar
 				isSideNavbarOpen={isSideNavbarOpen}
 				toggleSideNavbar={handleToggleSideNavbar}
 			/>

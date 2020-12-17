@@ -91,7 +91,11 @@ export default function Home({ data }) {
 		<>
 			<SEO image={bgImage?.asset?.fluid?.src} />
 			<Header id='home' bgImage={bgImage} />
-			<SectionTitle title={store.storeName} bgColor='var(--light-yellow)'>
+			<SectionTitle
+				title={store.storeName}
+				slogan={store.slogan}
+				bgColor='var(--light-yellow)'
+			>
 				<StoreInfo storeInfo={store} handleBgImage={handleBgImage} />
 			</SectionTitle>
 			<SectionTitle title='Onze Merken' bgColor='var(--blue)' id='merken'>

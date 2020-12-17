@@ -23,8 +23,6 @@ exports.handler = async (event, context) => {
 	}
 
 	for (const field of requiredFields) {
-		console.log(`Checking that ${field} is good`);
-
 		if (!body[field]) {
 			return {
 				statusCode: 400,

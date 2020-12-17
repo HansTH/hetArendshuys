@@ -42,6 +42,7 @@ const SideNavbarStyles = styled.nav`
 	border-radius: 0 0 4px 6px;
 	top: ${({ hasScrolled }) => (hasScrolled ? `-600px` : `0`)};
 	transition: all ease-in-out 0.3s;
+	z-index: 1000;
 
 	.separator-line {
 		width: 100%;

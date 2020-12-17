@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { breakpoint } from '../../styles/breakpoints';
 
 export default function brandCard({ brand, index }) {
-	console.log(brand.slug.current);
 	return (
 		<BrandCardStyles index={index}>
 			<div className='brand-container' id={brand.slug.current}>

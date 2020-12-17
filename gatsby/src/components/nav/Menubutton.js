@@ -12,7 +12,7 @@ export default function Menubutton({ isSideNavbarOpen, toggleSideNavbar }) {
 }
 
 const MenuButtonStyles = styled.button`
-	display: none;
+	/* display: none; */
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -21,11 +21,10 @@ const MenuButtonStyles = styled.button`
 	background-color: var(--blue);
 	border: 2px solid var(--yellow);
 	border-radius: 50%;
-	position: fixed;
-	top: 0;
-	right: 0;
-	margin: 1rem;
-	z-index: 1000;
+	/* position: fixed; */
+	/* top: 0; */
+	/* right: 0; */
+	/* margin: 1rem; */
 
 	&:hover {
 		background-color: var(--light-yellow);

@@ -14,7 +14,7 @@ var settings = {
 	initialSlide: 0,
 	infinite: true,
 	centerMode: true,
-	centerPadding: '60px',
+	// centerPadding: '60px',
 	responsive: [
 		{
 			breakpoint: size.md,
@@ -76,7 +76,7 @@ const BrandLogoStyles = styled.div`
 		border: 3px solid var(--yellow);
 		border-radius: 10px;
 		/* box-shadow: 2px 5px 20px 0 rgba(1, 50, 95, 0.3); */
-		box-shadow: 2px 4px 20px 0px rgba(255, 167, 0, 0.5);
+		box-shadow: 2px 4px 15px 0px rgba(255, 167, 0, 0.4);
 		transition: all ease-in-out 0.3s;
 		height: 150px;
 
@@ -102,14 +102,8 @@ const BrandLogoStyles = styled.div`
 
 	@media ${breakpoint.md} {
 		.brand-card {
-			width: 200px !important;
-			height: 150px;
-		}
-	}
-	@media ${breakpoint.sm} {
-		.brand-card {
-			width: 180px !important;
-			height: 130px;
+			width: 190px !important;
+			height: 140px;
 		}
 	}
 `;

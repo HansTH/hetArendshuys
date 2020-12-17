@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import NavLinks from './NavLinks';
-import smallLogo from '../../assets/images/arendshuys-logo-small.svg';
 import { breakpoint } from '../../styles/breakpoints';
 import SocialLinks from './SocialLinks';
+import NavLogoSmall from './NavLogoSmall';
 
 export default function TopNavbar({ hasScrolled, fixedPostion, socialLinks }) {
 	return (
@@ -13,9 +12,7 @@ export default function TopNavbar({ hasScrolled, fixedPostion, socialLinks }) {
 				<div className='container'>
 					<div className='navbar'>
 						<div className='top-nav-logo'>
-							<Link to='/'>
-								<img src={smallLogo} alt='het Arendshuys logo' />
-							</Link>
+							<NavLogoSmall />
 						</div>
 						<div className='top-nav-links'>
 							<NavLinks flexDirection='row' />
