@@ -36,7 +36,8 @@ const BrandCardStyles = styled.div`
 	.brand-container {
 		background-color: ${({ index }) =>
 			index % 2 === 0 ? 'var(--white )' : 'var(--light-yellow)'};
-		padding: 100px 0;
+		padding-top: 100px;
+		padding-bottom: 50px;
 	}
 	.brand-images {
 		display: grid;
