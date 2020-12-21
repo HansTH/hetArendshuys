@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HTHmedia from '../../assets/images/icons/HTH-media.svg';
+
 import { breakpoint } from '../../styles/breakpoints';
 import StoreContact from '../store/StoreContact';
 import SocialLinks from '../nav/SocialLinks';
@@ -31,11 +31,12 @@ export default function Footer({ footerInfo }) {
 						<StoreHours storeHours={storeHours} />
 					</div>
 				</div>
-				<p className='copyright'>
-					<a href='https://www.hansterhorst.com'>www.hansterhorst.com</a>
-					<img src={HTHmedia} alt='HTH media logo' />
-					<span>{currentYear}</span>
-				</p>
+				<div className='copyright'>
+					<p className=''>
+						&copy; Het Arendshuys&nbsp;<span>• {currentYear}</span>
+					</p>
+					<a href='https://www.hth.media'>www.hth.media</a>
+				</div>
 			</div>
 		</FooterStyles>
 	);
@@ -58,8 +59,8 @@ const FooterStyles = styled.footer`
 	.copyright {
 		color: var(--light-yellow);
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: center;
 		font-size: 1rem;
 		letter-spacing: 1px;
 
