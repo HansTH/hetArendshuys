@@ -14,14 +14,14 @@ export default {
 			title: 'Social Media Naam',
 			name: 'socialMediaName',
 			description:
-				'De naam van het social media platform (bijv> FaceBool, ...).',
+				'De naam van het social media platform (bijv. FaceBook, ...).',
 			type: 'string',
 		},
 		{
 			title: 'Social Media Link',
 			name: 'socialMediaUrl',
 			description:
-				'De URL van uw social media profile (bijv. https://www.facebook.com/...).',
+				'De URL link van uw social media profile (bijv. https://www.facebook.com/...).',
 			type: 'url',
 		},
 	],

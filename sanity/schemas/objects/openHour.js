@@ -11,18 +11,7 @@ export default {
 			name: 'day',
 			description: 'Welke dag van de week? (bijv. Maandag, Dinsdag, ...)',
 			type: 'string',
-		},
-		{
-			title: 'Openingstijd',
-			name: 'openingHour',
-			description: 'Hoe laat gaat de winkel open? (bijv. 09:00)',
-			type: 'string',
-		},
-		{
-			title: 'Sluitingstijd',
-			name: 'closeHour',
-			description: 'Hoelaat gaat de winkel sluiten? (bijv. 18:00)',
-			type: 'string',
+			validation: (Rule) => Rule.required().error('Verplicht invullen!'),
 		},
 		{
 			title: 'Gesloten',
@@ -32,6 +21,20 @@ export default {
 			options: {
 				layout: 'checkbox',
 			},
+		},
+		{
+			title: 'Openingstijd',
+			name: 'openingHour',
+			description: 'Hoe laat gaat de winkel open? (bijv. 09:00)',
+			type: 'string',
+			hidden: 'closed',
+		},
+		{
+			title: 'Sluitingstijd',
+			name: 'closeHour',
+			description: 'Hoe laat gaat de winkel sluiten? (bijv. 18:00)',
+			type: 'string',
+			hidden: 'closed',
 		},
 	],
 	preview: {

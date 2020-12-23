@@ -9,7 +9,9 @@ export default {
 		{
 			title: 'Merk Naam',
 			name: 'brandName',
+			description: 'De naam van het merk. Belangrijk! maximaal 3 woorden.',
 			type: 'string',
+			validation: (Rule) => Rule.required().error('Verplicht invullen!'),
 		},
 		{
 			title: 'Slug',
@@ -17,7 +19,7 @@ export default {
 			description:
 				'Belangrijk! Klik de "Generate" button, om automatisch een naam te genereren.',
 			type: 'slug',
-			validation: (Rule) => Rule.required(),
+			validation: (Rule) => Rule.required().error('Klik de "Generate" button'),
 			options: {
 				source: 'brandName',
 				maxLength: 99,
@@ -26,14 +28,24 @@ export default {
 		{
 			title: 'Merk Informatie',
 			name: 'brandInfo',
+			description:
+				'Belangrijk! Maximaal 700 characters, zodat alle tekst zichtbaar is.',
+
 			type: 'text',
+			validation: (Rule) =>
+				Rule.required()
+					.error('Verplicht invullen!')
+					.max(700)
+					.error('Maximaal 700 characters.'),
 		},
 		{
 			title: 'Fotos',
 			name: 'brandImages',
+			description: "Verplicht 4 foto's toevoegen.",
 			type: 'array',
 			of: [{ type: 'image' }],
-			validation: (Rule) => Rule.max(4).warning("Maximaal 4 foto's."),
+			validation: (Rule) =>
+				Rule.min(4).max(4).error("Verplicht 4 foto's toevoegen."),
 		},
 	],
 };
