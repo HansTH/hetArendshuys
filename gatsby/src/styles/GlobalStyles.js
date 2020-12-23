@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   
 
   *{
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+    
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html{
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
     color: var(--blue);
@@ -33,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
 
   h2{
     font-size: 2.5rem;
+    margin: 0;
   }
 
   h3{
