@@ -67,6 +67,11 @@ export default function useForm() {
 				arendshuys: '',
 			});
 		}
+
+		function clearSubmitMessage() {
+			setMessage('');
+		}
+		setTimeout(clearSubmitMessage, 5000);
 	}
 
 	return {
