@@ -48,11 +48,11 @@ export default function Layout({ children }) {
 
 	useEffect(() => {
 		baseUri.current = document.baseURI;
-
+		console.log(baseUri.current);
 		if (
 			baseUri.current === process.env.BASE_URL_NETLIFY ||
-			baseUri.current === 'http://localhost:8000/' ||
-			baseUri.current === 'http://localhost:8888/' ||
+			baseUri.current === process.env.BASE_URL_8000 ||
+			baseUri.current === process.env.BASE_URL_8888 ||
 			baseUri.current === process.env.BASE_URL_WEBSITE
 		) {
 			setFixedPosition(false);
