@@ -1,12 +1,12 @@
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-	host: 'smtp03.hostnet.nl',
-	port: 587,
+	host: process.env.MAIL_HOST,
+	port: process.env.MAIL_PORT,
 	secure: false, // true for 465, false for other ports
 	auth: {
-		user: 'info@xyztest.nl', // generated ethereal user
-		pass: 'jC6-r41Cv3', // generated ethereal password
+		user: process.env.MAIL_USER, // generated ethereal user
+		pass: process.env.MAIL_PASS, // generated ethereal password
 	},
 });
 
