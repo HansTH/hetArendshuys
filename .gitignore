@@ -1,1 +1,13 @@
+# Mac files
 .DS_Store
+
+# Dependency directories
+/node_modules
+
+# Dependency
+package-lock.json
+
+# lerna files
+/lerna-debug.log
+
+notes.md
