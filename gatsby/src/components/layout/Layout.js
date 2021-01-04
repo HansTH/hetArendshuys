@@ -50,9 +50,10 @@ export default function Layout({ children }) {
 		baseUri.current = document.baseURI;
 
 		if (
-			baseUri.current === 'https://dreamy-keller-d31d1e.netlify.app/' ||
+			baseUri.current === process.env.BASE_URL_NETLIFY ||
 			baseUri.current === 'http://localhost:8000/' ||
-			baseUri.current === 'https://www.xyztest.nl/'
+			baseUri.current === 'http://localhost:8888/' ||
+			baseUri.current === process.env.BASE_URL_WEBSITE
 		) {
 			setFixedPosition(false);
 		} else {
