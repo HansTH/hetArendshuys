@@ -34,12 +34,12 @@ exports.handler = async (event, context) => {
 	}
 
 	// send mail with defined transport object
-	const info = await transporter.sendMail({
-		from: `${body.email}`, // sender address
-		to: 'info@xyztest.nl', // list of receivers
-		subject: 'Hello ✔', // Subject line
-		text: 'Hello world?', // plain text body
-		html: `<b>${body.message}</b>`, // html body
+	await transporter.sendMail({
+		from: `${body.naam} <${body.email}>`, // sender address
+		to: process.env.MAIL_USER, // list of receivers
+		subject: 'Contactformulier Website', // Subject line
+		text: `${body.naam}`, // plain text body
+		html: `<b>${body.bericht}</b>`, // html body
 	});
 
 	return {
