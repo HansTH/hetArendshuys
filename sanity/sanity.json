@@ -1,32 +1,34 @@
 {
-	"root": true,
-	"project": {
-		"name": "hetArendshuys"
-	},
-	"api": {
-		"projectId": "ogce3hqp",
-		"dataset": "production"
-	},
-	"plugins": [
-		"@sanity/base",
-		"@sanity/components",
-		"@sanity/default-layout",
-		"@sanity/default-login",
-		"@sanity/desk-tool"
-	],
-	"env": {
-		"development": {
-			"plugins": ["@sanity/vision"]
-		}
-	},
-	"parts": [
-		{
-			"name": "part:@sanity/base/schema",
-			"path": "./schemas/schema"
-		},
-		{
-			"name": "part:@sanity/desk-tool/structure",
-			"path": "./deskStructure.js"
-		}
-	]
+  "root": true,
+  "api": {
+    "projectId": "SANITY_STUDIO_API_PROJECT_ID",
+    "dataset": "SANITY_STUDIO_API_DATASET"
+  },
+  "project": {
+    "name": "hetArendshuys"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
+    }
+  ]
 }
