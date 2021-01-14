@@ -51,10 +51,10 @@ export default function Layout({ children }) {
     console.log(baseUri.current);
 
     if (
-      baseUri.current === process.env.BASE_URL_NETLIFY ||
+      baseUri.current === 'https://www.xyztest.nl/' ||
+      baseUri.current === 'https://hetarendshuys.netlify.app/' ||
       baseUri.current === 'http://localhost:8000/' ||
-      baseUri.current === 'http://localhost:8888/' ||
-      baseUri.current === process.env.BASE_URL_WEBSITE
+      baseUri.current === 'http://localhost:8888/'
     ) {
       setFixedPosition(false);
       console.log(false, process.env.BASE_URL_WEBSITE);
