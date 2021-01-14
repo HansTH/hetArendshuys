@@ -57,8 +57,10 @@ export default function Layout({ children }) {
       baseUri.current === process.env.BASE_URL_WEBSITE
     ) {
       setFixedPosition(false);
+      console.log(false, process.env.BASE_URL_WEBSITE);
     } else {
       setFixedPosition(true);
+      console.log(true, process.env.BASE_URL_WEBSITE);
     }
   }, [children]);
 
