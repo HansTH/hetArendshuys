@@ -48,6 +48,7 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     baseUri.current = document.baseURI;
+    console.log(baseUri.current);
 
     if (
       baseUri.current === process.env.BASE_URL_NETLIFY ||
