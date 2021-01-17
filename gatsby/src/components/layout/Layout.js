@@ -101,20 +101,17 @@ export default function Layout({ children }) {
         fixedPostion={fixedPosition}
         socialLinks={winkel.socialMediaData}
       />
-
+      <SideNavbar
+        isSideNavbarOpen={isSideNavbarOpen}
+        toggleSideNavbar={handleToggleSideNavbar}
+        hasScrolled={hasScrolled}
+        socialLinks={winkel.socialMediaData}
+      />
       <MobileNavbar
         isSideNavbarOpen={isSideNavbarOpen}
         toggleSideNavbar={handleToggleSideNavbar}
       />
-      {children}
-      <div className='side-navbar'>
-        <SideNavbar
-          isSideNavbarOpen={isSideNavbarOpen}
-          toggleSideNavbar={handleToggleSideNavbar}
-          hasScrolled={hasScrolled}
-          socialLinks={winkel.socialMediaData}
-        />
-      </div>
+      <main>{children}</main>
       <Footer footerInfo={data.storeData} />
     </LayoutStyles>
   );
@@ -123,11 +120,5 @@ export default function Layout({ children }) {
 const LayoutStyles = styled.div`
   .side-navbar {
     display: ${({ fixedPosition }) => (fixedPosition ? 'none' : 'block')};
-  }
-
-  @media ${breakpoint.sm} {
-    .side-navbar {
-      display: block;
-    }
   }
 `;
