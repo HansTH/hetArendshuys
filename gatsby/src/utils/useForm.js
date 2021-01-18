@@ -38,7 +38,7 @@ export default function useForm() {
       bericht: input.bericht,
       arendshuys: input.arendshuys,
     };
-
+    console.log(body);
     // send data to the serverless function when submit
     const res = await fetch(
       `${process.env.GATSBY_SERVERLESS_BASE}/submitform`,
