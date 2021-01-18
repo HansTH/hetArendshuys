@@ -5,8 +5,6 @@ import GlobalStyles from '../../styles/GlobalStyles';
 import 'normalize.css';
 import Footer from './Footer';
 import TopNavbar from '../nav/TopNavbar';
-import SideNavbar from '../nav/SideNavbar';
-import { breakpoint } from '../../styles/breakpoints';
 import MobileNavbar from '../nav/MobileNavbar';
 
 export default function Layout({ children }) {
@@ -95,24 +93,19 @@ export default function Layout({ children }) {
   `);
 
   const [{ winkel }] = data.storeData.nodes;
-
+  console.log(winkel.socialMediaData);
   return (
     <LayoutStyles fixedPosition={fixedPosition}>
       <GlobalStyles />
       <TopNavbar
         hasScrolled={hasScrolled}
-        fixedPostion={fixedPosition}
-        socialLinks={winkel.socialMediaData}
-      />
-      <SideNavbar
-        isSideNavbarOpen={isSideNavbarOpen}
-        toggleSideNavbar={handleToggleSideNavbar}
-        hasScrolled={hasScrolled}
+        fixedPosition={fixedPosition}
         socialLinks={winkel.socialMediaData}
       />
       <MobileNavbar
         isSideNavbarOpen={isSideNavbarOpen}
         toggleSideNavbar={handleToggleSideNavbar}
+        socialLinks={winkel.socialMediaData}
       />
       <main>{children}</main>
       <Footer footerInfo={data.storeData} />
@@ -121,7 +114,7 @@ export default function Layout({ children }) {
 }
 
 const LayoutStyles = styled.div`
-  .side-navbar {
-    display: ${({ fixedPosition }) => (fixedPosition ? 'none' : 'block')};
+  main {
+    z-index: 0;
   }
 `;

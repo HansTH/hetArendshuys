@@ -11,29 +11,27 @@ export default function SideNavbar({
   toggleSideNavbar,
   socialLinks,
 }) {
+  console.log(socialLinks);
   return (
-    <>
-      <Overlay isOpen={isSideNavbarOpen} toggleSideNavbar={toggleSideNavbar} />
-      <div className='container'>
-        <SideNavbarStyles
-          hasScrolled={hasScrolled}
-          isSideNavbarOpen={isSideNavbarOpen}
-          toggleSideNavbar={isSideNavbarOpen}
-        >
-          <NavLogo />
-          <div className='separator-line' />
-          <div className='side-nav-links'>
-            <NavLinks
-              flexDirection='column'
-              toggleSideNavbar={toggleSideNavbar}
-            />
-          </div>
-          <div className='side-social-links'>
-            <SocialLinks flexDirection='row' links={socialLinks} />
-          </div>
-        </SideNavbarStyles>
-      </div>
-    </>
+    <div className='container'>
+      <SideNavbarStyles
+        hasScrolled={hasScrolled}
+        isSideNavbarOpen={isSideNavbarOpen}
+        toggleSideNavbar={isSideNavbarOpen}
+      >
+        <NavLogo />
+        <div className='separator-line' />
+        <div className='side-nav-links'>
+          <NavLinks
+            flexDirection='column'
+            toggleSideNavbar={toggleSideNavbar}
+          />
+        </div>
+        <div className='side-social-links'>
+          <SocialLinks flexDirection='row' links={socialLinks} />
+        </div>
+      </SideNavbarStyles>
+    </div>
   );
 }
 
@@ -64,28 +62,5 @@ const SideNavbarStyles = styled.nav`
 
   @media ${breakpoint.sm} {
     top: ${({ isSideNavbarOpen }) => (isSideNavbarOpen ? `0` : `-600px`)};
-  }
-`;
-
-/* Overlay when Sidebar is showing */
-function Overlay({ isOpen, toggleSideNavbar }) {
-  return <OverlayStyles isOpen={isOpen} onClick={toggleSideNavbar} />;
-}
-
-const OverlayStyles = styled.div`
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  transition: display ease-in-out 0.9s;
-  transition-delay: 0.3s;
-
-  /* Breakpoints */
-  @media ${breakpoint.md} {
-    display: ${({ isOpen }) => (isOpen ? `block` : `none`)};
-    background-color: ${({ isOpen }) =>
-      isOpen ? `rgba(0, 0, 0, 0.7)` : `rgba(0, 0, 0, 1)`};
-    backdrop-filter: blur(5px);
   }
 `;
