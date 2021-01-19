@@ -1,32 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 import privacyData from '../assets/data/privacy';
+import SectionTitle from '../components/SectionTitle';
+import SEO from '../components/SEO';
 
 export default function Privacy() {
   return (
-    <PrivacyStyles>
-      <div className='container'>
-        <div className='privacy-table'>
-          <h3>Privacy verklaring</h3>
-          <h3>Inhoudsopgave:</h3>
-          <div>
-            {privacyData('hello').map((data) => (
+    <>
+      <SEO title='Privacy' />
+      <PrivacyStyles>
+        <SectionTitle title='Privacy verklaring'>
+          <div className='container'>
+            <div className='privacy-table'>
+              {/* <h3>Inhoudsopgave:</h3> */}
               <>
-                <button key={data.id}>
-                  <h4>{data.header}</h4>
-                </button>
-                <div className='privacy-content'>{data.content}</div>
+                {privacyData('hello').map((data) => (
+                  <>
+                    <button key={data.id}>
+                      <h4>{data.header}</h4>
+                    </button>
+                    <div className='privacy-content'>{data.content}</div>
+                  </>
+                ))}
               </>
-            ))}
+            </div>
           </div>
-        </div>
-      </div>
-    </PrivacyStyles>
+        </SectionTitle>
+      </PrivacyStyles>
+    </>
   );
 }
 
 const PrivacyStyles = styled.div`
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
   color: var(--blue);
 
