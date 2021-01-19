@@ -45,7 +45,6 @@ export const data = graphql`
 `;
 
 export default function merken({ data }) {
-  console.log(data.brands.nodes);
   const brands = data.brands.nodes.map((brand) => brand.brandName);
   return (
     <>

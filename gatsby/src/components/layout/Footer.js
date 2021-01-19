@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import { breakpoint } from '../../styles/breakpoints';
@@ -33,6 +34,7 @@ export default function Footer({ footerInfo }) {
           </div>
         </div>
         <div className='copyright'>
+          <Link to='/privacy'>Privacy verklaring</Link>
           <p className=''>
             &copy; Het Arendshuys&nbsp;<span>• {currentYear}</span>
           </p>
@@ -71,7 +73,13 @@ const FooterStyles = styled.footer`
     letter-spacing: 1px;
 
     a {
-      margin-top: 0.5rem;
+      margin: 0.5rem 0;
+      color: var(--light-yellow);
+      font-size: 0.8rem;
+
+      &:hover {
+        color: var(--yellow);
+      }
     }
 
     img {

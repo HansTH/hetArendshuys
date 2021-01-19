@@ -46,19 +46,16 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     baseUri.current = document.baseURI;
-    console.log(baseUri.current);
 
     if (
-      baseUri.current === 'https://www.xyztest.nl/' ||
-      baseUri.current === 'https://hetarendshuys.netlify.app/' ||
+      baseUri.current === process.env.GATSBY_BASE_URL ||
+      baseUri.current === process.env.GATSBY_BASE_URL_NETLIFY ||
       baseUri.current === 'http://localhost:8000/' ||
       baseUri.current === 'http://localhost:8888/'
     ) {
       setFixedPosition(false);
-      console.log(false, process.env.BASE_URL_WEBSITE);
     } else {
       setFixedPosition(true);
-      console.log(true, process.env.BASE_URL_WEBSITE);
     }
   }, [children]);
 
@@ -93,7 +90,7 @@ export default function Layout({ children }) {
   `);
 
   const [{ winkel }] = data.storeData.nodes;
-  console.log(winkel.socialMediaData);
+
   return (
     <LayoutStyles fixedPosition={fixedPosition}>
       <GlobalStyles />

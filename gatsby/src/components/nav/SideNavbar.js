@@ -11,7 +11,6 @@ export default function SideNavbar({
   toggleSideNavbar,
   socialLinks,
 }) {
-  console.log(socialLinks);
   return (
     <div className='container'>
       <SideNavbarStyles
