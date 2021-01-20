@@ -20,7 +20,7 @@ export default function SEO({ children, title, image, keywords }) {
       <html lang='nl' />
       <title>{title || site.siteMetadata.title}</title>
       {/* Fav Icons */}
-      <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+      <link rel='icon' type='image/svg+xml' href='/arendshuys-logo-small.svg' />
       <link rel='alternate icon' href='/favicon.ico' /> {/* fallback */}
       <link rel='preconnect' href='https://fonts.gstatic.com' />
       <link
@@ -53,6 +53,13 @@ export default function SEO({ children, title, image, keywords }) {
         property='og:description'
         content={site.siteMetadata.description}
         key='ogdescription'
+      />
+      <meta property='og:locale' content='nl-NL' key='oglocale' />
+      <meta property='og:type' content='website' key='ogtype' />
+      <meta
+        property='og:url'
+        content='https://www.hetarendshuys.nl'
+        key='ogurl'
       />
       {children}
     </Helmet>

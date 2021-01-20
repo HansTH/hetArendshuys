@@ -1,33 +1,29 @@
 import React from 'react';
 
-export default function privacyData(props) {
-  console.log(props);
+export default function privacyData({ storeName, contactInfo }) {
+  const { zipcode, telefoonNumber, email, city, address } = contactInfo;
   return [
     {
       id: 1,
-      header: 'Gegegevens, Het Arendshuys',
+      header: `Gegegevens, ${storeName}`,
       content: (
         <div>
           <p>
-            Het Arendshuys, gevestigd aan Langestraat 42 in Delden, is
+            {storeName}, gevestigd aan Langestraat 42 in Delden, is
             verantwoordelijk voor de verwerking van persoonsgegevens zoals
             weergegeven in deze privacyverklaring.
           </p>
           <p>
             <strong>Contactgegevens</strong>:
           </p>
-          <p>Het Arendshuys</p>
-          <p>Langestraat 42</p>
-          <p>7491 AZ Delden</p>
+          <p>{storeName}</p>
+          <p>{address}</p>
+          <p>{`${zipcode} ${city}`}</p>
+          <p>{telefoonNumber}</p>
+          <p>{email}</p>
           <p>
-            <a href='tel:0743766118'>074 – 376 61 18</a>
-          </p>
-          <p>
-            <a href='https://www.hetarendshuys.nl'>www.hetarendshuys.nl</a>
-          </p>
-          <p>
-            Monique Ensink is de Functionaris Gegevensbescherming van Het
-            Arendshuys. Zij is te bereiken via info@hetarendshuys.nl
+            Monique Oude Heuvel - Ensink is de Functionaris Gegevensbescherming
+            van Het Arendshuys. Zij is te bereiken via {email}
           </p>
         </div>
       ),
@@ -37,7 +33,7 @@ export default function privacyData(props) {
       header: 'Persoonsgegevens die wij verwerken',
       content: (
         <p>
-          Het Arendshuys verwerkt geen persoonsgegevens omdat op onze site geen
+          {storeName} verwerkt geen persoonsgegevens omdat op onze site geen
           persoonsgegevens achter gelaten kunnen worden. Ook gebruiken we geen
           social media plugins.
         </p>
@@ -56,8 +52,8 @@ export default function privacyData(props) {
           zo te voorkomen dat er gegevens over kinderen verzameld worden zonder
           ouderlijke toestemming. Als u er van overtuigd bent dat wij zonder die
           toestemming persoonlijke gegevens hebben verzameld over een
-          minderjarige, neem dan contact met ons op via info@hetarendshuys.nl,
-          dan verwijderen wij deze informatie
+          minderjarige, neem dan contact met ons op via {email}, dan verwijderen
+          wij deze informatie
         </p>
       ),
     },
@@ -68,7 +64,8 @@ export default function privacyData(props) {
       content: (
         <div>
           <p>
-            Het Arendshuys verwerkt uw persoonsgegevens voor de volgende doelen:
+            {storeName} verwerkt uw persoonsgegevens voor de volgende doelen:
+            email beantwoorden.
           </p>
           <p>
             - U te kunnen bellen of e-mailen indien dit nodig is om onze
@@ -82,13 +79,8 @@ export default function privacyData(props) {
       header: 'Geautomatiseerde besluitvorming',
       content: (
         <p>
-          Het Arendshuys neemt #responsibility op basis van geautomatiseerde
-          verwerkingen besluiten over zaken die (aanzienlijke) gevolgen kunnen
-          hebben voor personen. Het gaat hier om besluiten die worden genomen
-          door computerprogramma's of -systemen, zonder dat daar een mens
-          (bijvoorbeeld een medewerker van Het Arendshuys) tussen zit. Het
-          Arendshuys gebruikt de volgende computerprogramma's of -systemen:
-          email.
+          {storeName} maakt geen gebruik van geautomatiseerde verwerkingen
+          systemen.
         </p>
       ),
     },
@@ -97,9 +89,9 @@ export default function privacyData(props) {
       header: 'Hoe lang we persoonsgegevens bewaren',
       content: (
         <p>
-          Het Arendshuys bewaart uw persoonsgegevens niet langer dan strikt
-          nodig is om de doelen te realiseren waarvoor uw gegevens worden
-          verzameld. Wij hanteren de volgende bewaartermijnen voor de volgende
+          {storeName} bewaart uw persoonsgegevens niet langer dan strikt nodig
+          is om de doelen te realiseren waarvoor uw gegevens worden verzameld.
+          Wij hanteren de volgende bewaartermijnen voor de volgende
           (categorieën) van persoonsgegevens: 2 jaar.
         </p>
       ),
@@ -109,9 +101,9 @@ export default function privacyData(props) {
       header: 'Delen van persoonsgegevens met derden',
       content: (
         <p>
-          Het Arendshuys verstrekt uitsluitend aan derden en alleen als dit
-          nodig is voor de uitvoering van onze overeenkomst met u of om te
-          voldoen aan een wettelijke verplichting.
+          {storeName} verstrekt uitsluitend aan derden en alleen als dit nodig
+          is voor de uitvoering van onze overeenkomst met u of om te voldoen aan
+          een wettelijke verplichting.
         </p>
       ),
     },
@@ -119,7 +111,7 @@ export default function privacyData(props) {
       id: 8,
       header: 'Cookies, of vergelijkbare technieken, die wij gebruiken',
       content: (
-        <p>Het Arendshuys gebruikt geen cookies of vergelijkbare technieken.</p>
+        <p>{storeName} gebruikt geen cookies of vergelijkbare technieken.</p>
       ),
     },
     {
@@ -130,23 +122,23 @@ export default function privacyData(props) {
           U heeft het recht om uw persoonsgegevens in te zien, te corrigeren of
           te verwijderen. Daarnaast heeft u het recht om uw eventuele
           toestemming voor de gegevensverwerking in te trekken of bezwaar te
-          maken tegen de verwerking van uw persoonsgegevens door Het Arendshuys
+          maken tegen de verwerking van uw persoonsgegevens door {storeName}
           en heeft u het recht op gegevensoverdraagbaarheid. Dat betekent dat u
           bij ons een verzoek kunt indienen om de persoonsgegevens die wij van u
           beschikken in een computerbestand naar u of een ander, door u genoemde
           organisatie, te sturen. U kunt een verzoek tot inzage, correctie,
           verwijdering, gegevensoverdraging van uw persoonsgegevens of verzoek
           tot intrekking van uw toestemming of bezwaar op de verwerking van uw
-          persoonsgegevens sturen naar info@hetarendshuys.nl. Om er zeker van te
-          zijn dat het verzoek tot inzage door u is gedaan, vragen wij u een
-          kopie van uw identiteitsbewijs met het verzoek mee te sturen. Maak in
-          deze kopie uw pasfoto, MRZ (machine readable zone, de strook met
-          nummers onderaan het paspoort), paspoortnummer en Burgerservicenummer
-          (BSN) zwart. Dit ter bescherming van uw privacy. We reageren zo snel
-          mogelijk, maar binnen vier weken, op uw verzoek. Het Arendshuys wil u
-          er tevens op wijzen dat u de mogelijkheid heeft om een klacht in te
-          dienen bij de nationale toezichthouder, de Autoriteit
-          Persoonsgegevens. Dat kan via de volgende link:
+          persoonsgegevens sturen naar {email}. Om er zeker van te zijn dat het
+          verzoek tot inzage door u is gedaan, vragen wij u een kopie van uw
+          identiteitsbewijs met het verzoek mee te sturen. Maak in deze kopie uw
+          pasfoto, MRZ (machine readable zone, de strook met nummers onderaan
+          het paspoort), paspoortnummer en Burgerservicenummer (BSN) zwart. Dit
+          ter bescherming van uw privacy. We reageren zo snel mogelijk, maar
+          binnen vier weken, op uw verzoek. {storeName} wil u er tevens op
+          wijzen dat u de mogelijkheid heeft om een klacht in te dienen bij de
+          nationale toezichthouder, de Autoriteit Persoonsgegevens. Dat kan via
+          de volgende link:
           https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons
         </p>
       ),
@@ -156,12 +148,12 @@ export default function privacyData(props) {
       header: 'Hoe wij persoonsgegevens beveiligen',
       content: (
         <p>
-          Het Arendshuys neemt de bescherming van uw gegevens serieus en neemt
+          {storeName} neemt de bescherming van uw gegevens serieus en neemt
           passende maatregelen om misbruik, verlies, onbevoegde toegang,
           ongewenste openbaarmaking en ongeoorloofde wijziging tegen te gaan.
           Als u de indruk heeft dat uw gegevens niet goed beveiligd zijn of er
           aanwijzingen zijn van misbruik, neem dan contact op met onze
-          klantenservice of via info@hetarendshuys.nl
+          klantenservice of via {email}
         </p>
       ),
     },
