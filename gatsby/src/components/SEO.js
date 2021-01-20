@@ -22,6 +22,12 @@ export default function SEO({ children, title, image, keywords }) {
       {/* Fav Icons */}
       <link rel='icon' type='image/svg+xml' href='/arendshuys-logo-small.svg' />
       <link rel='alternate icon' href='/favicon.ico' /> {/* fallback */}
+      <link
+        rel='apple-touch-icon'
+        type='image/png'
+        sizes='114x114'
+        href='/icon-114.png'
+      />
       <link rel='preconnect' href='https://fonts.gstatic.com' />
       <link
         href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap'
