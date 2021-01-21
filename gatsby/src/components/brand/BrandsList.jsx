@@ -8,7 +8,7 @@ import PortableText from '../PortableText';
 
 export default function BrandsList({ data }) {
   const [storeInfo] = data.storeInfo.nodes;
-  const { body } = storeInfo.winkel;
+  const { _rawBody } = storeInfo.winkel;
   const brandList = data.brands.nodes;
 
   return (
@@ -21,7 +21,7 @@ export default function BrandsList({ data }) {
             ))}
           </div>
           <div className='brand-info'>
-            <PortableText blocks={body} />
+            <PortableText blocks={_rawBody} />
           </div>
         </div>
       </div>

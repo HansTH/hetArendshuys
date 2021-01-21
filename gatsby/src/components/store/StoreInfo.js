@@ -8,7 +8,7 @@ import PortableText from '../PortableText';
 export default function StoreInfo({ storeInfo, handleBgImage }) {
   return (
     <StoreInfoStyles>
-      <PortableText blocks={storeInfo.body} />
+      <PortableText blocks={storeInfo._rawBody} />
       <div className='images-grid'>
         {storeInfo.smallStoreImg.map((image, index) => (
           <Link

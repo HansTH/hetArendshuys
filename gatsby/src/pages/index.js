@@ -14,18 +14,7 @@ export const data = graphql`
         id
         store: winkel {
           slogan
-          body {
-            _type
-            style
-            _key
-            list
-            children {
-              _key
-              _type
-              marks
-              text
-            }
-          }
+          _rawBody(resolveReferences: { maxDepth: 10 })
           storeName
           smallStoreImg: storeImages {
             asset {

@@ -12,18 +12,7 @@ export const data = graphql`
       nodes {
         id
         winkel {
-          body {
-            _type
-            style
-            _key
-            list
-            children {
-              _key
-              _type
-              marks
-              text
-            }
-          }
+          _rawBody(resolveReferences: { maxDepth: 10 })
           storeImages {
             asset {
               id
@@ -39,18 +28,7 @@ export const data = graphql`
       nodes {
         id
         brandName
-        body {
-          _key
-          _type
-          list
-          style
-          children {
-            _key
-            _type
-            marks
-            text
-          }
-        }
+        _rawBody(resolveReferences: { maxDepth: 10 })
         slug {
           current
         }

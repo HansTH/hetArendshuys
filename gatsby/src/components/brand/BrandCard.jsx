@@ -16,7 +16,7 @@ export default function brandCard({ brand, index }) {
           >
             <div className='brand-info'>
               <h3>{brand.brandName}</h3>
-              <PortableText blocks={brand.body} />
+              <PortableText blocks={brand._rawBody} />
             </div>
             <div className='brand-images'>
               {brand.brandImages.map((image, index) => (
