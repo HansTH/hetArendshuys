@@ -12,7 +12,18 @@ export const data = graphql`
       nodes {
         id
         winkel {
-          storeInfo
+          body {
+            _type
+            style
+            _key
+            list
+            children {
+              _key
+              _type
+              marks
+              text
+            }
+          }
           storeImages {
             asset {
               id
@@ -28,7 +39,18 @@ export const data = graphql`
       nodes {
         id
         brandName
-        brandInfo
+        body {
+          _key
+          _type
+          list
+          style
+          children {
+            _key
+            _type
+            marks
+            text
+          }
+        }
         slug {
           current
         }
