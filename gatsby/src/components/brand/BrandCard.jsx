@@ -5,8 +5,6 @@ import { breakpoint } from '../../styles/breakpoints';
 import PortableText from '../PortableText';
 
 export default function brandCard({ brand, index }) {
-  const { body } = brand;
-  console.log(brand);
   return (
     <BrandCardStyles index={index}>
       <div className='brand-container' id={brand.slug.current}>
@@ -18,7 +16,7 @@ export default function brandCard({ brand, index }) {
           >
             <div className='brand-info'>
               <h3>{brand.brandName}</h3>
-              <PortableText blocks={body} />
+              <PortableText blocks={brand.body} />
             </div>
             <div className='brand-images'>
               {brand.brandImages.map((image, index) => (
