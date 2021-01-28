@@ -34,7 +34,7 @@ export const data = graphql`
         }
         brandImages {
           asset {
-            fixed(height: 150, width: 250) {
+            fixed(height: 250, width: 250) {
               ...GatsbySanityImageFixed
             }
           }
