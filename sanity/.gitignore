@@ -1,6 +1,6 @@
 .DS_Store
 /node_modules
 /dist
-sanity.json
+yarn.lock
 package-lock.json
 .env
