@@ -35,7 +35,8 @@ export default {
     {
       title: 'Winkel Fotos',
       name: 'storeImages',
-      description: "Vier foto's van uw winkel.",
+      description:
+        "Vier grote foto's van uw winkel. Als je met de iPhone foto's maakt, en deze verstuurt naar je mail. Verstuur deze dan met de GROOT optie.",
       type: 'array',
       of: [{ type: 'image' }],
       validation: (Rule) => Rule.max(4).error("Maximaal 4 foto's."),

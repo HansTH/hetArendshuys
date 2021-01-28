@@ -40,7 +40,8 @@ export default {
     {
       title: 'Fotos',
       name: 'brandImages',
-      description: "Verplicht 4 foto's toevoegen.",
+      description:
+        "Verplicht 4 foto's toevoegen. Als je met de iPhone foto's maakt, en deze verstuurt naar je mail. Verstuur deze dan met de NORMAAL optie.",
       type: 'array',
       of: [{ type: 'image' }],
       validation: (Rule) =>
